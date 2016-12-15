@@ -1,0 +1,30 @@
+//Items
+item.bullet.name=Bullet
+item.crowbar.name=Crowbar
+item.keycard.name=Keycard
+item.lockpick.name=Lockpick
+item.magnet_gun.name=Magnet Gun
+item.red_key.name=Red Key
+item.rifle.name=Rifle
+item.wrench.name=Wrench
+
+item.binoculars.name=Binoculars
+item.flashlight.name=Flashlight
+item.hammer.name=Hammer
+item.rusty_key.name=Rusty Key
+
+//Custom
+item.iron_magnetized.name=Magnetized Iron
+item.magnet.name=Magnet
+item.nail.name=Nail
+
+//Blocks
+tile.Barricade.name=Barricade
+tile.TechLock.name=Tech Lock
+
+//CreativeTabs
+itemGroup.tabAll=NeighborCraft
+
+//Entity
+entity.hnm.Neighbor.name=Neighbor
+entity.hnm.Bullet.name=Bullet

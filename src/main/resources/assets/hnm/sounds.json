@@ -1,0 +1,14 @@
+{
+      "rifle.shoot": {
+    "category" : "master",
+    "sounds" : [ "shoot_rifle" ]
+    },
+      "neighbor.hurt": {
+    "category" : "master",
+    "sounds" : [ "hurt_neighbor" ]
+    },
+      "neighbor.living": {
+    "category" : "master",
+    "sounds" : [ "living_neighbor" ]
+    }
+}
