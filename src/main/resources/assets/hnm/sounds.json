@@ -1,14 +1,58 @@
 {
+      "beartrap.close": {
+    "category" : "master",
+    "sounds" : [ "beartrap_close" ]
+    },
+      "crow.loud": {
+    "category" : "master",
+    "sounds" : [ "crow_loud" ]
+    },
+      "crow.low": {
+    "category" : "master",
+    "sounds" : [ "crow_low" ]
+    },
+      "door.locked": {
+    "category" : "master",
+    "sounds" : [ "door_locked" ]
+    },
+      "nail.eject": {
+    "category" : "master",
+    "sounds" : [ "nail_eject" ]
+    },
+      "nail.eject.1": {
+    "category" : "master",
+    "sounds" : [ "nail_eject_1" ]
+    },
+      "neighbor.break": {
+    "category" : "master",
+    "sounds" : [ "neighbor_break" ]
+    },
+      "neighbor.break.1": {
+    "category" : "master",
+    "sounds" : [ "neighbor_break_1" ]
+    },
+      "neighbor.chase": {
+    "category" : "master",
+    "sounds" : [ "neighbor_chase" ]
+    },
+      "neighbor.chase.1": {
+    "category" : "master",
+    "sounds" : [ "neighbor_chase_1" ]
+    },
+      "neighbor.gasp": {
+    "category" : "master",
+    "sounds" : [ "neighbor_gasp" ]
+    },
+      "neighbor.kill.entity": {
+    "category" : "master",
+    "sounds" : [ "neighbor_kill_entity" ]
+    },
+      "neighbor.searching": {
+    "category" : "master",
+    "sounds" : [ "neighbor_searching" ]
+    },
       "rifle.shoot": {
     "category" : "master",
-    "sounds" : [ "shoot_rifle" ]
-    },
-      "neighbor.hurt": {
-    "category" : "master",
-    "sounds" : [ "hurt_neighbor" ]
-    },
-      "neighbor.living": {
-    "category" : "master",
-    "sounds" : [ "living_neighbor" ]
+    "sounds" : [ "rifle_shoot" ]
     }
 }

@@ -118,7 +118,7 @@ public class EntityNeighbor extends EntityMob{
 	
 	//@Override
 	//protected String getLivingSound() {
-		//return RefStrings.MODID + ":neighbor.living";
+		//return RefStrings.MODID + ":neighbor.gasp";
 	//}
 	
 	@Override
