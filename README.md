@@ -3,6 +3,7 @@
 
 # Credits	
 -cubic_control: Main coder/texturer/modeler	
+-MasterPro92 - the resource guy!	
 
 #Copyright	
 TERMS AND CONDITIONS 

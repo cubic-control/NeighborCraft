@@ -1,5 +1,7 @@
 package com.cubic_control.hnm.Entity;
 
+import java.util.Random;
+
 import com.cubic_control.hnm.Configuration.MConfig;
 import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Lib.RefStrings;
@@ -110,11 +112,15 @@ public class EntityNeighbor extends EntityMob{
      return true;
     }
 	
-	//@Override
-	//protected String getHurtSound()
-    //{
-       // return RefStrings.MODID + ":neighbor.hurt";
-    //}
+	@Override
+	protected String getHurtSound() {
+		Random rand = new Random();
+		if(rand.nextInt() < 5){
+			return RefStrings.MODID + ":neighbor.hurt";
+		}else{
+			return RefStrings.MODID + ":neighbor.hurt.1";
+		}
+    }
 	
 	//@Override
 	//protected String getLivingSound() {
