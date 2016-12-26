@@ -8,5 +8,7 @@ public class MTileEntity {
 	public static void createTileEntity(){
 		GameRegistry.registerTileEntity(TileEntityBarricade.class, "Barricade_TileEntity");
 		GameRegistry.registerTileEntity(TileEntityTechLock.class, "TechLock_TileEntity");
+		
+		GameRegistry.registerTileEntity(TileEntityRedPadlock.class, "RedPadlock_TileEntity");
 	}
 }

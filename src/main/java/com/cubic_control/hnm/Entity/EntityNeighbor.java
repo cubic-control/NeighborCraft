@@ -60,13 +60,20 @@ public class EntityNeighbor extends EntityMob{
 	@Override
 	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
+        if(MConfig.helloNeighborVersion == 3){
+        	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
+        }else{
+        	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
+        }
+        
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(35.0D);
+        
         if(MConfig.hardcoreNeighbor){
-        	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200.0D);
+        	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(2000.0D);
         }else{
         	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
         }
+        
         if(this.worldObj.difficultySetting == EnumDifficulty.EASY){
         	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(8.0D);
         }else if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL){

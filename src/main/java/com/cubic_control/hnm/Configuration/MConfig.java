@@ -18,6 +18,7 @@ public class MConfig extends Configuration{
 	public static boolean rifleRequiresBullets = false;
 	public static boolean doesRifleDoDamage = false;
 	public static boolean useRealisticTextures = true;
+	public static int helloNeighborVersion = 0;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
@@ -32,6 +33,7 @@ public class MConfig extends Configuration{
 	
 	public static void syncConfig() {
 		addBooleans();
+		addInts();
 
 	    if(config.hasChanged()){
 	    	config.save();
@@ -54,6 +56,11 @@ public class MConfig extends Configuration{
 		rifleRequiresBullets = config.getBoolean("rifleRequiresBullets", ConfigTypes.BOOLEANS, false, "makes the rifle require bullets too shoot.");
 		doesRifleDoDamage = config.getBoolean("doesRifleDoDamage", ConfigTypes.BOOLEANS, false, "makes the rifle bullets do damage.");
 		useRealisticTextures = config.getBoolean("useRealisticTextures", ConfigTypes.BOOLEANS, true, "makes the items use more realistic textures.");
+	}
+	
+	public static void addInts(){
+		config.getCategory(ConfigTypes.INTS);
+		helloNeighborVersion = config.getInt("helloNeighborVersion", ConfigTypes.INTS, 0, 0, 3, "selects the version of Hello Neighbor you want to use. 0 is PRE-ALPHA, 1 is ALPHA-1 and so-on");
 	}
 	
 	public static Configuration getConfig(){

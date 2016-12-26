@@ -2,7 +2,7 @@
 -If you find a bug report it.	
 
 # Credits	
--cubic_control: Main coder/texturer/modeler	
+-cubic_control: Main coder/texturer/modeler			
 -MasterPro92 - the resource guy!	
 
 #Copyright	

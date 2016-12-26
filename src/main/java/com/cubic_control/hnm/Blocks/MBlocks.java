@@ -12,5 +12,7 @@ public class MBlocks {
 	public static void createBlocks(){
 		Barricade = new ModBlockBarricade("Barricade", "barricade_block");
 		TechLock = new ModBlockTechLock("TechLock", "TechLock_Block");
+		
+		red_padlock = new ModBlockRedPadlock("lock_red");
 	}
 }

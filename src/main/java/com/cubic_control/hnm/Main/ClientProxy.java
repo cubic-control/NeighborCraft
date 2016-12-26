@@ -16,10 +16,12 @@ import com.cubic_control.hnm.Entity.Render.RenderHammer;
 import com.cubic_control.hnm.Entity.Render.RenderRedKey;
 import com.cubic_control.hnm.Entity.Render.RenderMagnetGun;
 import com.cubic_control.hnm.Entity.Render.RenderNeighbor;
+import com.cubic_control.hnm.Entity.Render.RenderRedPadlock;
 import com.cubic_control.hnm.Entity.Render.RenderRifle;
 import com.cubic_control.hnm.Entity.Render.RenderRustyKey;
 import com.cubic_control.hnm.Entity.Render.RenderTechLock;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricade;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityRedPadlock;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityTechLock;
 import com.cubic_control.hnm.Items.MItems;
 
@@ -52,5 +54,7 @@ public class ClientProxy extends ServerProxy{
 		MinecraftForgeClient.registerItemRenderer(MItems.binoculars, new RenderBinoculars());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBarricade.class, new RenderBarricade());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTechLock.class, new RenderTechLock());
+		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityRedPadlock.class, new RenderRedPadlock());
 	}
 }
