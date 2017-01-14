@@ -19,6 +19,8 @@ public class CraftingRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.magnet), "XXX", "  X", "XXX", 'X', MItems.iron_magnetized);
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.iron_magnetized), "XXX", "XYX", "XXX", 'X', Items.redstone, 'Y', Items.iron_ingot);
 		GameRegistry.addRecipe(new ItemStack(MItems.nail, 5), "X", "Y", 'X', Blocks.stone_slab, 'Y', Items.iron_ingot);
-		GameRegistry.addShapedRecipe(new ItemStack(MBlocks.Barricade), "XYX", "   ", "XYX", 'X', MItems.nail, 'Y', Blocks.planks);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.barricade_single), "XYX", "X X", 'X', MItems.nail, 'Y', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.barricade_double), MBlocks.barricade_single, MBlocks.barricade_single);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bullet), Items.string, Items.wheat, new ItemStack(Items.dye, 11, 11));
 	}
 }

@@ -14,11 +14,13 @@ public class MConfig extends Configuration{
 
 	public static Configuration config;
 	
-	public static boolean hardcoreNeighbor = false;
-	public static boolean rifleRequiresBullets = false;
-	public static boolean doesRifleDoDamage = false;
-	public static boolean useRealisticTextures = true;
-	public static int helloNeighborVersion = 0;
+	public static boolean hardcoreNeighbor;
+	public static boolean rifleRequiresBullets;
+	public static boolean doesRifleDoDamage;
+	public static boolean useRealisticTextures;
+	public static boolean isPlayerFasterThanNeighbor;
+	public static boolean canGetKeyFromNeighbor;
+	public static boolean use3DModels;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
@@ -55,12 +57,14 @@ public class MConfig extends Configuration{
 		hardcoreNeighbor = config.getBoolean("hardcoreNeighbor", ConfigTypes.BOOLEANS, false, "makes the neighbor realy strong.");
 		rifleRequiresBullets = config.getBoolean("rifleRequiresBullets", ConfigTypes.BOOLEANS, false, "makes the rifle require bullets too shoot.");
 		doesRifleDoDamage = config.getBoolean("doesRifleDoDamage", ConfigTypes.BOOLEANS, false, "makes the rifle bullets do damage.");
-		useRealisticTextures = config.getBoolean("useRealisticTextures", ConfigTypes.BOOLEANS, true, "makes the items use more realistic textures.");
+		useRealisticTextures = config.getBoolean("useRealisticTextures", ConfigTypes.BOOLEANS, true, "makes the items use more realistic textures.[Requires Restart]");
+		isPlayerFasterThanNeighbor = config.getBoolean("isPlayerFasterThanNeighbor", ConfigTypes.BOOLEANS, false, "if true, the player is faster than the neighbor.");
+		canGetKeyFromNeighbor = config.getBoolean("canGetKeyFromNeighbor", ConfigTypes.BOOLEANS, true, "sets if you can get a red key from the neighbor by shift-right clicking him.");
+		use3DModels = config.getBoolean("use3DModels", ConfigTypes.BOOLEANS, true, "makes the items in the mod use 3D models.");
 	}
 	
 	public static void addInts(){
 		config.getCategory(ConfigTypes.INTS);
-		helloNeighborVersion = config.getInt("helloNeighborVersion", ConfigTypes.INTS, 0, 0, 3, "selects the version of Hello Neighbor you want to use. 0 is PRE-ALPHA, 1 is ALPHA-1 and so-on");
 	}
 	
 	public static Configuration getConfig(){

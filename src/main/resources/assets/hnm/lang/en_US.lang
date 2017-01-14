@@ -1,26 +1,43 @@
 //Items
-item.bullet.name=Bullet
-item.crowbar.name=Crowbar
-item.keycard.name=Keycard
-item.lockpick.name=Lockpick
-item.magnet_gun.name=Magnet Gun
-item.red_key.name=Red Key
-item.rifle.name=Rifle
-item.wrench.name=Wrench
-
+    //Pre-Alpha
 item.binoculars.name=Binoculars
 item.flashlight.name=Flashlight
 item.hammer.name=Hammer
-item.rusty_key.name=Rusty Key
-
-//Custom
+item.key_rusty.name=Rusty Key
+    //Alpha 1
+item.crowbar.name=Crowbar
+item.rifle.name=Rifle
+    //Alpha 2
+item.bullet.name=Bullet
+item.door_white.name=White Door
+item.key_red.name=Red Key
+item.keycard.name=Key Card
+item.lockpick.name=Lock Pick
+item.magnet_gun.name=Magnet Gun
+item.wrench.name=Wrench
+    //Alpha 3
+item.door_golden.name=Golden Door
+item.key_blue.name=Blue Key
+item.key_golden.name=Golden Key
+    //Custom
 item.iron_magnetized.name=Magnetized Iron
 item.magnet.name=Magnet
 item.nail.name=Nail
 
 //Blocks
-tile.Barricade.name=Barricade
-tile.TechLock.name=Tech Lock
+    //Pre-Alpha
+tile.lock_rusty.name=Rusty Lock
+    //Alpha 1
+tile.grave.name=Grave
+    //Alpha 2
+tile.door_white.name=White Door
+tile.lock_red.name=Red Lock
+tile.TechLock.name=K.A.L.
+    //Alpha 3
+tile.door_golden.name=Golden Door
+    //Custom
+tile.barricade_double.name=Double Barricade
+tile.barricade_single.name=Single Barricade
 
 //CreativeTabs
 itemGroup.tabAll=NeighborCraft

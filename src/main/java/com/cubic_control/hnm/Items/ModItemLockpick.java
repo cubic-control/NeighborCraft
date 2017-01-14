@@ -23,7 +23,7 @@ public class ModItemLockpick extends ModItem{
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		Block block = world.getBlock(x, y, z);
-		if(block == MBlocks.red_padlock || block == MBlocks.rusty_padlock){
+		if(block == MBlocks.padlock_blue || block == MBlocks.padlock_golden || block == MBlocks.padlock_red || block == MBlocks.padlock_rusty){
 			world.setBlock(x, y, z, Blocks.air);
 			block.dropBlockAsItem(world, x, y, z, 0, 0);
 			player.inventory.consumeInventoryItem(this);

@@ -21,7 +21,7 @@ public class RenderRedKey implements IItemRenderer{
 	
 	public RenderRedKey(){
 		model = new ModelRedKey();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/key_red.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/key_red.png");
 	}
 
 	@Override

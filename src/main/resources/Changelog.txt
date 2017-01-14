@@ -1,3 +1,15 @@
+v1.0.3:
+-Changed Functionality of Keys and Lockpicks(now unlock locks)
+-Added Locks(Red and Rusty versions)
+-Added more sounds to the neighbor
+-Neighbor can now open doors
+-Config option to set if neighbor is faster than player
+-Hardcore Neighbor Config optiom now increases neighbor's health to 2000.
+-Config Option for if neighbor carries the red key
+-If you shift-right click on the neighbor you will recieve a red key if enabled
+-Improved a lot of textures
+-Fixed a bug that made the game crash when fighting neighbor
+-Neighbor no longer runs away, but will heal if not at full health
 v1.0.2:
 Added:
 -Functionality For Crowbar(Breaks Barricades)

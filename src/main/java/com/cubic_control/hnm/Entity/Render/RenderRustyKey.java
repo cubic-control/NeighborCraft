@@ -21,7 +21,7 @@ public class RenderRustyKey implements IItemRenderer{
 	
 	public RenderRustyKey(){
 		model = new ModelRustyKey();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/key_rusty.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/key_rusty.png");
 	}
 
 	@Override

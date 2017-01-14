@@ -14,7 +14,7 @@ public class CreativeTabAll extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return MItems.red_key;
+		return MItems.key_red;
 	}
 
 }

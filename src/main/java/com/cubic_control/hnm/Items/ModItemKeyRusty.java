@@ -19,7 +19,7 @@ public class ModItemKeyRusty extends ModItem{
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		Block block = world.getBlock(x, y, z);
-		if(block == MBlocks.rusty_padlock){
+		if(block == MBlocks.padlock_rusty){
 			world.setBlock(x, y, z, Blocks.air);
 			block.dropBlockAsItem(world, x, y, z, 0, 0);
 			return true;

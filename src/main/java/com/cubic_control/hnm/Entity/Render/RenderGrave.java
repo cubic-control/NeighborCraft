@@ -2,7 +2,7 @@ package com.cubic_control.hnm.Entity.Render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.cubic_control.hnm.Entity.Model.ModelBarricade;
+import com.cubic_control.hnm.Entity.Model.ModelGrave;
 import com.cubic_control.hnm.Lib.RefStrings;
 
 import net.minecraft.block.Block;
@@ -13,14 +13,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
-public class RenderBarricade extends TileEntitySpecialRenderer{
+public class RenderGrave extends TileEntitySpecialRenderer{
 	
-	ModelBarricade model;
+	ModelGrave model;
 	protected static ResourceLocation texture;
 	
-	public RenderBarricade(){
-		model = new ModelBarricade();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/blocks/barricade.png");
+	public RenderGrave(){
+		model = new ModelGrave();
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/blocks/grave.png");
 	}
 	
 	private void adjustRotatePivotViaMeta(World world, int x, int y, int z){

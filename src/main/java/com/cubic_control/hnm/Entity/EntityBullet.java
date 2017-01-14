@@ -49,7 +49,7 @@ public class EntityBullet extends EntityThrowable{
 	}
 	@Override
 	protected float getGravityVelocity()  {
-		return 0.0f;
+		return 0.01f;
 	}
    
 	@Override

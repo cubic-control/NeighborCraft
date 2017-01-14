@@ -21,7 +21,7 @@ public class RenderBinoculars implements IItemRenderer{
 	
 	public RenderBinoculars(){
 		model = new ModelBinoculars();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/binoculars_model.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/binoculars.png");
 	}
 
 	@Override

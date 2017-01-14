@@ -27,7 +27,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlockTechLock extends BlockContainer {
 	
-	protected ModBlockTechLock(String name, String TName) {
+	protected ModBlockTechLock(String name) {
 		super(Material.iron);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		this.setCreativeTab(MCreativeTabs.tabAll);
@@ -36,7 +36,7 @@ public class ModBlockTechLock extends BlockContainer {
 		this.setHarvestLevel("pickaxe", 0);
 		this.setStepSound(Block.soundTypeMetal);
 		this.setBlockName(name);
-		this.setBlockTextureName(RefStrings.MODID + ":" + TName);
+		this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		this.setTickRandomly(true);
 		GameRegistry.registerBlock(this, name);
 	}
@@ -57,8 +57,8 @@ public class ModBlockTechLock extends BlockContainer {
 		return false;
 	}
 	@Override
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_) {
-		return null;
+	public boolean isNormalCube() {
+		return false;
 	}
 	@Override
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
@@ -80,4 +80,18 @@ public class ModBlockTechLock extends BlockContainer {
             world.setBlockMetadataWithNotify(x, y, z, 4, 2);
         }
     }
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess access, int x, int y, int z){
+		int meta = access.getBlockMetadata(x, y, z);
+
+		if(meta == 3  || meta == 7){
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.1F);
+		}else if(meta == 4 || meta == 8){
+			this.setBlockBounds(0.9F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+		}else if(meta == 2 || meta == 6){
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 0.1F, 1.0F, 1.0F);
+		}else{
+			this.setBlockBounds(0.0F, 0.0F, 0.9F, 1.0F, 1.0F, 1.0F);
+		}
+	}
 }

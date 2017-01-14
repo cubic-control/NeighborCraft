@@ -20,7 +20,7 @@ public class RenderRedPadlock extends TileEntitySpecialRenderer{
 	
 	public RenderRedPadlock(){
 		model = new ModelRedPadLock();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/blocks/red_lock.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/blocks/lock_red.png");
 	}
 	
 	private void adjustRotatePivotViaMeta(World world, int x, int y, int z){

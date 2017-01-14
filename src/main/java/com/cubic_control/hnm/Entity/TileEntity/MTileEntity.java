@@ -6,9 +6,20 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class MTileEntity {
 	public static void createTileEntity(){
-		GameRegistry.registerTileEntity(TileEntityBarricade.class, "Barricade_TileEntity");
-		GameRegistry.registerTileEntity(TileEntityTechLock.class, "TechLock_TileEntity");
-		
-		GameRegistry.registerTileEntity(TileEntityRedPadlock.class, "RedPadlock_TileEntity");
+		//Pre-Alpha
+		GameRegistry.registerTileEntity(TileEntityCamera.class, "camera_TileEntity");
+		GameRegistry.registerTileEntity(TileEntityRustyPadlock.class, "padlock_rusty_TileEntity");
+		//Alpha 1
+		GameRegistry.registerTileEntity(TileEntityGrave.class, "grave_TileEntity");
+		//Alpha 2
+		GameRegistry.registerTileEntity(TileEntityGallonOfMilk.class, "gallon_of_milk_TileEntity");
+		GameRegistry.registerTileEntity(TileEntityTechLock.class, "KAL_TileEntity");
+		GameRegistry.registerTileEntity(TileEntityRedPadlock.class, "padlock_red_TileEntity");
+		//Alpha 3
+		GameRegistry.registerTileEntity(TileEntityPadlockBlue.class, "padlock_blue_TileEntity");
+		GameRegistry.registerTileEntity(TileEntityPadlockGolden.class, "padlock_golden_TileEntity");
+		//Custom
+		GameRegistry.registerTileEntity(TileEntityBarricadeDouble.class, "barricade_double_TileEntity");
+		GameRegistry.registerTileEntity(TileEntityBarricadeSingle.class, "barricade_single_TileEntity");
 	}
 }

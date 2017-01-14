@@ -1,17 +1,14 @@
 package com.cubic_control.hnm.Blocks;
 
-import java.util.ArrayList;
-import java.util.Random;
+import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityRedPadlock;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityRustyPadlock;
+import com.cubic_control.hnm.Lib.RefStrings;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Block.SoundType;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -19,32 +16,25 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricade;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityTechLock;
-import com.cubic_control.hnm.Lib.RefStrings;
+public class ModBlockPadlockRusty extends BlockContainer{
 
-import cpw.mods.fml.common.registry.GameRegistry;
-
-public class ModBlockBarricade extends BlockContainer {
-	
-	protected ModBlockBarricade(String name, String TName) {
-		super(ModMaterial.barricade);
+	protected ModBlockPadlockRusty(String name) {
+		super(Material.iron);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
-		this.setCreativeTab(MCreativeTabs.tabAll);
-		this.setHardness(15f);
-		this.setResistance(30f);
-		this.setHarvestLevel("axe", 0);
-		this.setStepSound(Block.soundTypeWood);
 		this.setBlockName(name);
-		this.setBlockTextureName(RefStrings.MODID + ":" + TName);
-		this.setTickRandomly(true);
+		this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		this.setBlockUnbreakable();
+		this.setCreativeTab(MCreativeTabs.tabAll);
+		this.setHardness(15.0f);
+		this.setHarvestLevel("pickaxe", 2);
+		this.setLightOpacity(0);
+		this.setResistance(30.0f);
+		this.setStepSound(soundTypeMetal);
 		GameRegistry.registerBlock(this, name);
 	}
 	@Override
-	public TileEntity createNewTileEntity(World var1, int var2) {
-		return new TileEntityBarricade();
+	public TileEntity createNewTileEntity(World world, int i1) {
+		return new TileEntityRustyPadlock();
 	}
 	@Override
 	public int getRenderType() {
@@ -59,27 +49,42 @@ public class ModBlockBarricade extends BlockContainer {
 		return false;
 	}
 	@Override
+	public boolean isNormalCube() {
+		return false;
+	}
+	@Override
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
         int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
         if (l == 0) {
             world.setBlockMetadataWithNotify(x, y, z, 1, 2);
-            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
         }
 
         if (l == 1) {
             world.setBlockMetadataWithNotify(x, y, z, 2, 2);
-            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
         }
 
         if (l == 2) {
             world.setBlockMetadataWithNotify(x, y, z, 3, 2);
-            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
         }
 
         if (l == 3) {
             world.setBlockMetadataWithNotify(x, y, z, 4, 2);
-            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
         }
     }
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess access, int x, int y, int z){
+		int meta = access.getBlockMetadata(x, y, z);
+
+		if(meta == 3  || meta == 7){
+			this.setBlockBounds(0.6F, 0.0F, 0.0F, 0.96F, 0.56F, 0.15F);
+		}else if(meta == 4 || meta == 8){
+			this.setBlockBounds(0.85F, 0.0F, 0.6F, 1.0F, 0.56F, 0.96F);
+		}else if(meta == 2 || meta == 6){
+			this.setBlockBounds(0.0F, 0.0F, 0.04F, 0.15F, 0.56F, 0.4F);
+		}else{
+			this.setBlockBounds(0.04F, 0.0F, 0.85F, 0.4F, 0.56F, 1.0F);
+		}
+	}
+
 }

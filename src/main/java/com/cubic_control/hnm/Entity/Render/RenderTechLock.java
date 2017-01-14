@@ -20,7 +20,7 @@ public class RenderTechLock extends TileEntitySpecialRenderer{
 	
 	public RenderTechLock(){
 		model = new ModelTechLock();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/blocks/TechLock.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/blocks/TechLock.png");
 	}
 	
 	private void adjustRotatePivotViaMeta(World world, int x, int y, int z){

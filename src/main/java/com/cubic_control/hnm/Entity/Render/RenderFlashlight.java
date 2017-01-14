@@ -21,7 +21,7 @@ public class RenderFlashlight implements IItemRenderer{
 	
 	public RenderFlashlight(){
 		model = new ModelFlashlight();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/flashlight_model.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/flashlight.png");
 	}
 
 	@Override

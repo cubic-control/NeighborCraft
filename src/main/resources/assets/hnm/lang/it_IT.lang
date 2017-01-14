@@ -1,0 +1,31 @@
+//Google Translate
+//Items
+item.bullet.name=Proiettile
+item.crowbar.name=Piede di porco
+item.keycard.name=Chiave magnetica
+item.lockpick.name=Grimaldello
+item.magnet_gun.name=Magnete Pistola
+item.red_key.name=Rosso Chiave
+item.rifle.name=Fucile
+item.wrench.name=Chiave inglese
+
+item.binoculars.name=Binocolo
+item.flashlight.name=Torcia elettrica
+item.hammer.name=Martello
+item.rusty_key.name=Arrugginito Chiave
+
+//Custom
+item.iron_magnetized.name=Magnetizzato Ferro
+item.magnet.name=Magnete
+item.nail.name=Chiodo
+
+//Blocks
+tile.Barricade.name=Barricata
+tile.TechLock.name=Tech Serratura
+
+//CreativeTabs
+itemGroup.tabAll=NeighborCraft
+
+//Entity
+entity.hnm.Neighbor.name=il Vicino
+entity.hnm.Bullet.name=Proiettile

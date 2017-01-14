@@ -21,7 +21,7 @@ public class RenderHammer implements IItemRenderer{
 	
 	public RenderHammer(){
 		model = new ModelHammer();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/hammer_model.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/hammer.png");
 	}
 
 	@Override

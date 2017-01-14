@@ -1,7 +1,8 @@
 package com.cubic_control.hnm.Blocks;
 
 import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityRedPadlock;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityGallonOfMilk;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityPadlockBlue;
 import com.cubic_control.hnm.Lib.RefStrings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -14,25 +15,23 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class ModBlockRedPadlock extends BlockContainer{
+public class ModBlockGallonOfMilk extends BlockContainer{
 
-	protected ModBlockRedPadlock(String name) {
+	protected ModBlockGallonOfMilk(String name) {
 		super(Material.iron);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		this.setBlockName(name);
 		this.setBlockTextureName(RefStrings.MODID + ":" + name);
-		this.setBlockUnbreakable();
 		this.setCreativeTab(MCreativeTabs.tabAll);
-		this.setHardness(15.0f);
-		this.setHarvestLevel("pickaxe", 2);
+		this.setHardness(10.0f);
 		this.setLightOpacity(0);
-		this.setResistance(30.0f);
+		this.setResistance(5.0f);
 		this.setStepSound(soundTypeMetal);
 		GameRegistry.registerBlock(this, name);
 	}
 	@Override
 	public TileEntity createNewTileEntity(World world, int i1) {
-		return new TileEntityRedPadlock();
+		return new TileEntityGallonOfMilk();
 	}
 	@Override
 	public int getRenderType() {

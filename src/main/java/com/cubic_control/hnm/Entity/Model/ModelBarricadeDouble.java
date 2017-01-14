@@ -15,13 +15,13 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelBarricade extends ModelBase
+public class ModelBarricadeDouble extends ModelBase
 {
   //fields
     ModelRenderer Shape1;
     ModelRenderer Shape2;
   
-  public ModelBarricade()
+  public ModelBarricadeDouble()
   {
     textureWidth = 64;
     textureHeight = 32;

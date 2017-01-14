@@ -21,7 +21,7 @@ public class RenderCrowbar implements IItemRenderer{
 	
 	public RenderCrowbar(){
 		model = new ModelCrowbar();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/the_crowbar.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/crowbar.png");
 	}
 
 	@Override

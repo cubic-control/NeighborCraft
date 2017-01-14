@@ -20,7 +20,7 @@ public class RenderMagnetGun implements IItemRenderer{
 	
 	public RenderMagnetGun(){
 		model = new ModelMagnetGun();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/gun_magnet.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/gun_magnet.png");
 	}
 
 	@Override

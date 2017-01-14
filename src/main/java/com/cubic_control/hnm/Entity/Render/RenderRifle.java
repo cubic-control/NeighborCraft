@@ -21,7 +21,7 @@ public class RenderRifle implements IItemRenderer{
 	
 	public RenderRifle(){
 		model = new ModelRifle();
-		texture = new ResourceLocation(RefStrings.MODID + ":textures/items/gun.png");
+		texture = new ResourceLocation(RefStrings.MODID + ":textures/models/items/gun.png");
 	}
 
 	@Override
