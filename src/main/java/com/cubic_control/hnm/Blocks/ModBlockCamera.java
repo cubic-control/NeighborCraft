@@ -23,23 +23,22 @@ import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeDouble;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeSingle;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityCamera;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityTechLock;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityKAL;
 import com.cubic_control.hnm.Lib.RefStrings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlockCamera extends BlockContainer {
 	
-	protected ModBlockCamera(String name, String TName) {
+	protected ModBlockCamera(String name) {
 		super(Material.iron);
-		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		this.setCreativeTab(MCreativeTabs.tabAll);
 		this.setHardness(15f);
 		this.setResistance(30f);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setStepSound(Block.soundTypeMetal);
 		this.setBlockName(name);
-		this.setBlockTextureName(RefStrings.MODID + ":" + TName);
+		this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		this.setTickRandomly(true);
 		GameRegistry.registerBlock(this, name);
 	}
@@ -57,6 +56,10 @@ public class ModBlockCamera extends BlockContainer {
 	}
 	@Override
 	public boolean renderAsNormalBlock() {
+		return false;
+	}
+	@Override
+	public boolean isNormalCube() {
 		return false;
 	}
 	@Override
@@ -83,4 +86,18 @@ public class ModBlockCamera extends BlockContainer {
             world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
         }
     }
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess access, int x, int y, int z){
+		int meta = access.getBlockMetadata(x, y, z);
+
+		if(meta == 3  || meta == 7){
+			this.setBlockBounds(0.0F, 0.55F, 0.0F, 1.0F, 0.85F, 1.0F);
+		}else if(meta == 4 || meta == 8){
+			this.setBlockBounds(0.0F, 0.55F, 0.0F, 1.0F, 0.85F, 1.0F);
+		}else if(meta == 2 || meta == 6){
+			this.setBlockBounds(0.0F, 0.55F, 0.0F, 1.0F, 0.85F, 1.0F);
+		}else{
+			this.setBlockBounds(0.0F, 0.55F, 0.0F, 1.0F, 0.85F, 1.0F);
+		}
+	}
 }

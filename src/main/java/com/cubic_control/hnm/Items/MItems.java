@@ -56,6 +56,7 @@ public class MItems {
 		key_golden = new ModItemKeyGolden("key_golden");
 		//All
 		spawn_egg = new ModItemMonsterPlacer("Neighbor", 0xFBFF87, 0x879DFF, "Neighbor");
+		spawn_egg = new ModItemMonsterPlacer("Shadow", 0x000000, 0x595959, "Shadow");
 		//Custom
 		iron_magnetized = new ModItem("iron_magnetized");
 		magnet = new ModItem("magnet");

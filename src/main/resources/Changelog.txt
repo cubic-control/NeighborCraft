@@ -1,3 +1,21 @@
+v1.0.4:
+-1.7 and 1.8 versions!
+-Added Bear Traps!
+-Added Graves!(HNA1)
+-Added Single Barricades!
+-Added A In-game Config!
+-Added A Golden Door!(HNA3)
+-Added A White Door!
+-Added A Better Crowbar/Hammer System!
+-Added A Gallon of Milk!(HNA2)
+-Added Better Collision Boxes!
+-Added The Camera!
+-Neighbor Can Now Open Iron + Modded Doors!(except doors from carpenter's blocks)
+-Added Blue Key!(HNA3)
+-Added Golden Key!(HNA3)
+-Added Blue Lock!(HNA3)
+-Added Golden Lock!(HNA3)
+-Added Working Binoculars!
 v1.0.3:
 -Changed Functionality of Keys and Lockpicks(now unlock locks)
 -Added Locks(Red and Rusty versions)

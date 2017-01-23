@@ -12,9 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class ModItemMagnetGun extends ModItem{
-	
-	protected EntityItem item;
-	protected EntityPlayer player;
 
 	public ModItemMagnetGun(String name) {
 		super(name);
@@ -26,6 +23,7 @@ public class ModItemMagnetGun extends ModItem{
 	@Override
 	public ItemStack onItemRightClick(ItemStack is, World world, EntityPlayer ep)
     {
+		//world.playSoundAtEntity(ep, RefStrings.MODID + ":electromagnet.on", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 		double radius = 10;
       	List<EntityItem> items = world.getEntitiesWithinAABB(EntityItem.class, ep.boundingBox.expand(radius, radius, radius));
       	for(EntityItem it : items){

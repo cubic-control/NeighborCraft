@@ -5,6 +5,7 @@ import com.cubic_control.hnm.Configuration.MConfig;
 import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
 import com.cubic_control.hnm.Entity.MEntity;
 import com.cubic_control.hnm.Entity.TileEntity.MTileEntity;
+import com.cubic_control.hnm.Events.MEventHandler;
 import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Lib.RefStrings;
 
@@ -47,6 +48,7 @@ public class MainRegistry {
 	@EventHandler
 	public static void load(FMLInitializationEvent event){
 		FMLCommonHandler.instance().bus().register(instance);
+		MEventHandler.registerEvents();
 	}
 	@EventHandler
 	public static void Postload(FMLPostInitializationEvent PostEvent){

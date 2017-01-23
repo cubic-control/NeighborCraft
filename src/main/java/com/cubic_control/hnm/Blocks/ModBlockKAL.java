@@ -10,9 +10,11 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
@@ -20,14 +22,29 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityTechLock;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityKAL;
+import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Lib.RefStrings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ModBlockTechLock extends BlockContainer {
+public class ModBlockKAL extends BlockContainer {
+	public ModBlockKAL instance;
+	public boolean isPowered;
 	
-	protected ModBlockTechLock(String name) {
+	public ModBlockKAL getInstance() {
+		return instance;
+	}
+	
+	public boolean isPowered() {
+		return isPowered;
+	}
+
+	public void setPowered(boolean isPowered) {
+		this.isPowered = isPowered;
+	}
+	
+	protected ModBlockKAL(String name) {
 		super(Material.iron);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		this.setCreativeTab(MCreativeTabs.tabAll);
@@ -41,8 +58,8 @@ public class ModBlockTechLock extends BlockContainer {
 		GameRegistry.registerBlock(this, name);
 	}
 	@Override
-	public TileEntity createNewTileEntity(World var1, int var2) {
-		return new TileEntityTechLock();
+	public TileEntity createNewTileEntity(World world, int i1) {
+		return new TileEntityKAL();
 	}
 	@Override
 	public int getRenderType() {
@@ -92,6 +109,22 @@ public class ModBlockTechLock extends BlockContainer {
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 0.1F, 1.0F, 1.0F);
 		}else{
 			this.setBlockBounds(0.0F, 0.0F, 0.9F, 1.0F, 1.0F, 1.0F);
+		}
+	}
+	@Override
+	public boolean canProvidePower() {
+		return true;
+	}
+	@Override
+	public int isProvidingStrongPower(IBlockAccess blockaccess, int i1, int i2, int i3, int side) {
+		return isProvidingWeakPower(blockaccess, i1, i2, i3, side);
+	}
+	@Override
+	public int isProvidingWeakPower(IBlockAccess blockaccess, int i, int j, int k, int side) {
+		if (!isPowered) {
+			return 0;
+		}else{
+			return 15;
 		}
 	}
 }

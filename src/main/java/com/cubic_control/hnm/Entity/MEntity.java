@@ -11,10 +11,12 @@ public class MEntity {
 	public static void createEntity(){
 		EntityRegistry.registerModEntity(EntityNeighbor.class, "Neighbor", 1, MainRegistry.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityBullet.class, "Bullet", 2, MainRegistry.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityShadow.class, "Shadow", 3, MainRegistry.instance, 64, 1, true);
 		addSpawn();
 	}
 	
 	public static void addSpawn(){
 		EntityRegistry.addSpawn(EntityNeighbor.class, 10, 1, 5, EnumCreatureType.creature);
+		EntityRegistry.addSpawn(EntityNeighbor.class, 5, 1, 3, EnumCreatureType.monster);
 	}
 }

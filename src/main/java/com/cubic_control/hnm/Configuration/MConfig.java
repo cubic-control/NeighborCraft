@@ -20,13 +20,13 @@ public class MConfig extends Configuration{
 	public static boolean useRealisticTextures;
 	public static boolean isPlayerFasterThanNeighbor;
 	public static boolean canGetKeyFromNeighbor;
-	public static boolean use3DModels;
+	public static boolean doItemsUse3DModels;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
 	 */
 	public static void createConfig(){
-		PATH = "config/cubic_control/hnm/";
+		PATH = "config/cubic_control/hnm/1.7/";
 		File file = new File(PATH + "ConfigurationFile.cfg");
 		config = new Configuration(file);
 		config.load();
@@ -60,7 +60,7 @@ public class MConfig extends Configuration{
 		useRealisticTextures = config.getBoolean("useRealisticTextures", ConfigTypes.BOOLEANS, true, "makes the items use more realistic textures.[Requires Restart]");
 		isPlayerFasterThanNeighbor = config.getBoolean("isPlayerFasterThanNeighbor", ConfigTypes.BOOLEANS, false, "if true, the player is faster than the neighbor.");
 		canGetKeyFromNeighbor = config.getBoolean("canGetKeyFromNeighbor", ConfigTypes.BOOLEANS, true, "sets if you can get a red key from the neighbor by shift-right clicking him.");
-		use3DModels = config.getBoolean("use3DModels", ConfigTypes.BOOLEANS, true, "makes the items in the mod use 3D models.");
+		doItemsUse3DModels = config.getBoolean("doItemsUse3DModels", ConfigTypes.BOOLEANS, true, "makes the items in the mod use 3D models.");
 	}
 	
 	public static void addInts(){

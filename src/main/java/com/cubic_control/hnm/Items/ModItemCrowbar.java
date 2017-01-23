@@ -43,7 +43,7 @@ public class ModItemCrowbar extends ModItem{
 		ItemStack parStack = new ItemStack(MItems.nail, 1);
 		EntityItem parEntity = new EntityItem(world, x, y, z, parStack);
 		Random rand = new Random();
-		if(block == MBlocks.barricade_double || tile == TileEntityBarricadeDouble.getInstance){
+		if(block == MBlocks.barricade_double){
 			if(rand.nextInt() > 5){
 				world.playSoundAtEntity(player, RefStrings.MODID + ":nail.eject", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 			}else{
@@ -53,13 +53,14 @@ public class ModItemCrowbar extends ModItem{
 			int hits = ((TileEntityBarricadeDouble) tile).getTimesHit();
 			if(hits >= 7){
 				world.setBlock(x, y, z, Blocks.air);
+				world.setTileEntity(x, y, z, null);
 				block.dropBlockAsItem(world, x, y, z, 0, 0);
 				hits = 0;
 			}else{
 				((TileEntityBarricadeDouble) tile).setTimesHit(hits+1);
 			}
 			return true;
-		}else if(block == MBlocks.barricade_single || tile == TileEntityBarricadeSingle.getInstance){
+		}else if(block == MBlocks.barricade_single){
 			if(rand.nextInt() > 5){
 				world.playSoundAtEntity(player, RefStrings.MODID + ":nail.eject", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 			}else{
@@ -69,6 +70,7 @@ public class ModItemCrowbar extends ModItem{
 			int hits = ((TileEntityBarricadeSingle) tile).getTimesHit();
 			if(hits >= 3){
 				world.setBlock(x, y, z, Blocks.air);
+				world.setTileEntity(x, y, z, null);
 				block.dropBlockAsItem(world, x, y, z, 0, 0);
 				hits = 0;
 			}else{

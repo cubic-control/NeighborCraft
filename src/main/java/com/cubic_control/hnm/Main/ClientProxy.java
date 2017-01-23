@@ -6,13 +6,16 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import com.cubic_control.hnm.Configuration.MConfig;
 import com.cubic_control.hnm.Entity.EntityBullet;
 import com.cubic_control.hnm.Entity.EntityNeighbor;
+import com.cubic_control.hnm.Entity.EntityShadow;
 import com.cubic_control.hnm.Entity.Model.ModelBiped64x64;
 import com.cubic_control.hnm.Entity.Model.ModelBullet;
 import com.cubic_control.hnm.Entity.Render.RenderBarricadeDouble;
 import com.cubic_control.hnm.Entity.Render.RenderBarricadeSingle;
+import com.cubic_control.hnm.Entity.Render.RenderBearTrap;
 import com.cubic_control.hnm.Entity.Render.RenderBinoculars;
 import com.cubic_control.hnm.Entity.Render.RenderBlueKey;
 import com.cubic_control.hnm.Entity.Render.RenderBullet;
+import com.cubic_control.hnm.Entity.Render.RenderCamera;
 import com.cubic_control.hnm.Entity.Render.RenderCrowbar;
 import com.cubic_control.hnm.Entity.Render.RenderFlashlight;
 import com.cubic_control.hnm.Entity.Render.RenderGallonOfMilk;
@@ -28,16 +31,19 @@ import com.cubic_control.hnm.Entity.Render.RenderRedPadlock;
 import com.cubic_control.hnm.Entity.Render.RenderRifle;
 import com.cubic_control.hnm.Entity.Render.RenderRustyKey;
 import com.cubic_control.hnm.Entity.Render.RenderRustyPadlock;
+import com.cubic_control.hnm.Entity.Render.RenderShadow;
 import com.cubic_control.hnm.Entity.Render.RenderTechLock;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeDouble;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeSingle;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityBearTrap;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityCamera;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityGallonOfMilk;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityGrave;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityKAL;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityPadlockBlue;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityPadlockGolden;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityRedPadlock;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityRustyPadlock;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityTechLock;
 import com.cubic_control.hnm.Items.MItems;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
@@ -55,11 +61,12 @@ public class ClientProxy extends ServerProxy{
 	private void registerEntity() {
 		RenderingRegistry.registerEntityRenderingHandler(EntityNeighbor.class, new RenderNeighbor(new ModelBiped64x64(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBullet.class, new RenderBullet(new ModelBullet(), 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(EntityShadow.class, new RenderShadow(new ModelBiped(), 0.5f));
 	}
 	public ModelBiped getArmorModel(int id){ return null; }
 	
 	public void registerRenders() {	
-		if(MConfig.use3DModels){
+		if(MConfig.doItemsUse3DModels){
 			//Pre-Alpha
 			MinecraftForgeClient.registerItemRenderer(MItems.binoculars, new RenderBinoculars());
 			MinecraftForgeClient.registerItemRenderer(MItems.flashlight, new RenderFlashlight());
@@ -80,9 +87,11 @@ public class ClientProxy extends ServerProxy{
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGrave.class, new RenderGrave());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityRedPadlock.class, new RenderRedPadlock());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityRustyPadlock.class, new RenderRustyPadlock());
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTechLock.class, new RenderTechLock());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityKAL.class, new RenderTechLock());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPadlockBlue.class, new RenderPadlockBlue());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPadlockGolden.class, new RenderPadlockGolden());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGallonOfMilk.class, new RenderGallonOfMilk());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamera.class, new RenderCamera());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBearTrap.class, new RenderBearTrap());
 	}
 }

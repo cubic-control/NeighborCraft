@@ -5,6 +5,8 @@ import net.minecraft.block.material.Material;
 
 public class MBlocks {
 	//Pre-Alpha
+	public static Block bear_trap;
+	public static Block camera;
 	public static Block padlock_rusty;
 	//Alpha 1
 	public static Block grave;
@@ -23,6 +25,8 @@ public class MBlocks {
 	
 	public static void createBlocks(){
 		//Pre-Alpha
+		bear_trap = new ModBlockBearTrap("beartrap");
+		camera = new ModBlockCamera("camera");
 		padlock_rusty = new ModBlockPadlockRusty("lock_rusty");
 		//Alpha 1
 		grave = new ModBlockGrave("grave");
@@ -30,7 +34,7 @@ public class MBlocks {
 		door_white = new ModBlockDoor(Material.wood, 2f, 15f, "axe", 0, Block.soundTypeWood, "door_white");
 		gallon_of_milk = new ModBlockGallonOfMilk("milk");
 		padlock_red = new ModBlockPadlockRed("lock_red");
-		TechLock = new ModBlockTechLock("TechLock");
+		TechLock = new ModBlockKAL("TechLock");
 		//Alpha 3
 		door_golden = new ModBlockDoor(Material.wood, 3f, 30f, "axe", 0, Block.soundTypeWood, "door_golden");
 		padlock_blue = new ModBlockPadlockBlue("lock_blue");

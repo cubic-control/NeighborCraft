@@ -87,6 +87,10 @@
     "category" : "master",
     "sounds" : [ "neighbor_chase_1" ]
     },
+      "neighbor.drink": {
+    "category" : "master",
+    "sounds" : [ "neighbor_drink" ]
+    },
       "neighbor.gasp": {
     "category" : "master",
     "sounds" : [ "neighbor_gasp" ]
@@ -114,6 +118,14 @@
       "neighbor.snore": {
     "category" : "master",
     "sounds" : [ "neighbor_snore" ]
+    },
+      "neighbor.urinate": {
+    "category" : "master",
+    "sounds" : [ "neighbor_urinate" ]
+    },
+      "power.down": {
+    "category" : "master",
+    "sounds" : [ "power_down" ]
     },
       "rifle.shoot": {
     "category" : "master",

@@ -23,7 +23,7 @@ import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeDouble;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeSingle;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityGrave;
-import com.cubic_control.hnm.Entity.TileEntity.TileEntityTechLock;
+import com.cubic_control.hnm.Entity.TileEntity.TileEntityKAL;
 import com.cubic_control.hnm.Lib.RefStrings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
