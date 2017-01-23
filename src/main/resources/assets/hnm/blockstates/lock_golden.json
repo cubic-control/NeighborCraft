@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "hnm:lock_golden" },
+        "facing=south": { "model": "hnm:lock_golden", "y": 90 },
+        "facing=west": { "model": "hnm:lock_golden", "y": 180 },
+        "facing=north": { "model": "hnm:lock_golden", "y": 270 }
+    }
+}

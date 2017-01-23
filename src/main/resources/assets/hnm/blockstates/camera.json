@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "hnm:camera" },
+        "facing=south": { "model": "hnm:camera", "y": 90 },
+        "facing=west": { "model": "hnm:camera", "y": 180 },
+        "facing=north": { "model": "hnm:camera", "y": 270 }
+    }
+}

@@ -1,0 +1,9 @@
+{
+
+    "parent": "block/cube_all",
+
+    "textures": {
+        "all": "hnm:blocks/lock_blue"
+    }
+
+}

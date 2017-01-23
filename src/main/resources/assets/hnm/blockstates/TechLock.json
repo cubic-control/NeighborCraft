@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "hnm:TechLock" },
+        "facing=south": { "model": "hnm:TechLock", "y": 90 },
+        "facing=west": { "model": "hnm:TechLock", "y": 180 },
+        "facing=north": { "model": "hnm:TechLock", "y": 270 }
+    }
+}

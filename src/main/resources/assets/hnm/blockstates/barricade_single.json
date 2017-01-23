@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "hnm:barricade_single" },
+        "facing=south": { "model": "hnm:barricade_single", "y": 90 },
+        "facing=west": { "model": "hnm:barricade_single", "y": 180 },
+        "facing=north": { "model": "hnm:barricade_single", "y": 270 }
+    }
+}

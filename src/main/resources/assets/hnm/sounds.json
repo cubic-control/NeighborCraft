@@ -1,0 +1,134 @@
+{
+      "beartrap.close": {
+    "category" : "master",
+    "sounds" : [ "beartrap_close" ]
+    },
+      "boot.close.door": {
+    "category" : "master",
+    "sounds" : [ "boot_close_door" ]
+    },
+      "boot.open.door": {
+    "category" : "master",
+    "sounds" : [ "boot_open_door" ]
+    },
+      "crow.loud": {
+    "category" : "master",
+    "sounds" : [ "crow_loud" ]
+    },
+      "crow.low": {
+    "category" : "master",
+    "sounds" : [ "crow_low" ]
+    },
+      "door.close": {
+    "category" : "master",
+    "sounds" : [ "door_close" ]
+    },
+      "door.locked": {
+    "category" : "master",
+    "sounds" : [ "door_locked" ]
+    },
+      "door.open": {
+    "category" : "master",
+    "sounds" : [ "door_open" ]
+    },
+      "electromagnet.on": {
+    "category" : "master",
+    "sounds" : [ "electromagnet_on" ]
+    },
+      "flashlight.off": {
+    "category" : "master",
+    "sounds" : [ "flashlight_off" ]
+    },
+      "flashlight.on": {
+    "category" : "master",
+    "sounds" : [ "flashlight_on" ]
+    },
+      "fridge.door.close": {
+    "category" : "master",
+    "sounds" : [ "fridge_door_close" ]
+    },
+      "fridge.door.open": {
+    "category" : "master",
+    "sounds" : [ "fridge_door_open" ]
+    },
+      "generator.on": {
+    "category" : "master",
+    "sounds" : [ "generator_on" ]
+    },
+      "hammer.nail": {
+    "category" : "master",
+    "sounds" : [ "hammer_nail" ]
+    },
+      "lock.creakingkeyunlock": {
+    "category" : "master",
+    "sounds" : [ "lock_creakingkeyunlock" ]
+    },
+      "nail.eject": {
+    "category" : "master",
+    "sounds" : [ "nail_eject" ]
+    },
+      "nail.eject.1": {
+    "category" : "master",
+    "sounds" : [ "nail_eject_1" ]
+    },
+      "neighbor.break": {
+    "category" : "master",
+    "sounds" : [ "neighbor_break" ]
+    },
+      "neighbor.break.1": {
+    "category" : "master",
+    "sounds" : [ "neighbor_break_1" ]
+    },
+      "neighbor.chase": {
+    "category" : "master",
+    "sounds" : [ "neighbor_chase" ]
+    },
+      "neighbor.chase.1": {
+    "category" : "master",
+    "sounds" : [ "neighbor_chase_1" ]
+    },
+      "neighbor.drink": {
+    "category" : "master",
+    "sounds" : [ "neighbor_drink" ]
+    },
+      "neighbor.gasp": {
+    "category" : "master",
+    "sounds" : [ "neighbor_gasp" ]
+    },
+      "neighbor.hammering": {
+    "category" : "master",
+    "sounds" : [ "neighbor_hammering" ]
+    },
+      "neighbor.hurt": {
+    "category" : "master",
+    "sounds" : [ "neighbor_hurt" ]
+    },
+      "neighbor.hurt.1": {
+    "category" : "master",
+    "sounds" : [ "neighbor_hurt_1" ]
+    },
+      "neighbor.kill.entity": {
+    "category" : "master",
+    "sounds" : [ "neighbor_kill_entity" ]
+    },
+      "neighbor.searching": {
+    "category" : "master",
+    "sounds" : [ "neighbor_searching" ]
+    },
+      "neighbor.snore": {
+    "category" : "master",
+    "sounds" : [ "neighbor_snore" ]
+    },
+      "neighbor.urinate": {
+    "category" : "master",
+    "sounds" : [ "neighbor_urinate" ]
+    },
+      "power.down": {
+    "category" : "master",
+    "sounds" : [ "power_down" ]
+    },
+      "rifle.shoot": {
+    "category" : "master",
+    "sounds" : [ "rifle_shoot" ]
+    }
+}

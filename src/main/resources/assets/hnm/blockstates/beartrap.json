@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "hnm:beartrap" },
+        "facing=south": { "model": "hnm:beartrap", "y": 90 },
+        "facing=west": { "model": "hnm:beartrap", "y": 180 },
+        "facing=north": { "model": "hnm:beartrap", "y": 270 }
+    }
+}

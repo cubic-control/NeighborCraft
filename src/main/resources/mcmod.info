@@ -1,0 +1,16 @@
+[
+{
+  "modid": "hnm",
+  "name": "NeighborCraft",
+  "description": "Mod Based On The Game Hello Neighbor.",
+  "version": "RELEASE",
+  "mcversion": "1.8",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["cubic_control"],
+  "credits": "Me for coding.",
+  "logoFile": "hnm18.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

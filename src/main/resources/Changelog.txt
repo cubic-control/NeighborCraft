@@ -1,0 +1,51 @@
+v1.0.3:
+-Changed Functionality of Keys and Lockpicks(now unlock locks)
+-Added Locks(Red and Rusty versions)
+-Added more sounds to the neighbor
+-Neighbor can now open doors
+-Config option to set if neighbor is faster than player
+-Hardcore Neighbor Config optiom now increases neighbor's health to 2000.
+-Config Option for if neighbor carries the red key
+-If you shift-right click on the neighbor you will recieve a red key if enabled
+-Improved a lot of textures
+-Fixed a bug that made the game crash when fighting neighbor
+-Neighbor no longer runs away, but will heal if not at full health
+v1.0.2:
+Added:
+-Functionality For Crowbar(Breaks Barricades)
+-Functionality For Lockpick(Same as Red Key, but consumes Lockpick)
+-Barricades(Only breaks by Crowbar & Hammer)
+-Tech Lock(Does nothing right now)
+-Flashlight
+-Hammer
+-Functionality For Hammer(Breaks Barricades)
+-Binoculars
+-Nail
+-Rusty Key
+-Functionality For Rusty Key(Opens Doors)
+-Config Option For Rifle Damage
+-Improved Neighbor AI(Now runs away if low on health; Will heal if not at full health)
+v1.0.1:
+Changed:
+-Red Key's Texture.
+Added:
+-Custom Model For Red Key.
+-Functionality For Red Key(can now open doors).
+-Custom Model For Crowbar.
+v1.0.0:
+Added:
+-Bullet
+-Crowbar
+-Magnetized Iron
+-Keycard
+-Lockpick
+-Magnet
+-Magnet Gun
+-Red Key
+-Rifle
+-Wrench
+-Custom Model For Magnet Gun.
+-Functionality For Magnet Gun(attracts item towards player while holding right click).
+-Custom Model For Rifle.
+-Functionality For Rifle(shoots Bullets).
+-Neighbor

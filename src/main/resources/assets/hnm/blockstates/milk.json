@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east": { "model": "hnm:milk" },
+        "facing=south": { "model": "hnm:milk", "y": 90 },
+        "facing=west": { "model": "hnm:milk", "y": 180 },
+        "facing=north": { "model": "hnm:milk", "y": 270 }
+    }
+}

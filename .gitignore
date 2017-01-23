@@ -1,0 +1,24 @@
+/.gradle/
+/.settings/
+/bin/
+/build/
+/eclipse/
+/gradle/
+/run/
+/.classpath
+/.project
+/1.8_Client.launch
+/1.8_Server.launch
+/Build.bat
+/build.gradle
+/CREDITS-fml.txt
+/forge-1.8-11.14.4.1577-changelog
+/gradle.properties
+/gradlew
+/gradlew.bat
+/LICENSE-fml.txt
+/MinecraftForge-Credits.txt
+/MinecraftForge-License.txt
+/Paulscode IBXM Library License.txt
+/Paulscode SoundSystem CodecIBXM License.txt
+/README.txt

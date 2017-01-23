@@ -1,0 +1,13 @@
+{
+
+    "parent": "block/door_top",
+
+    "textures": {
+
+        "bottom": "hnm:blocks/door_golden_lower",
+
+        "top": "hnm:blocks/door_golden_upper"
+
+    }
+
+}
