@@ -13,8 +13,8 @@ import net.minecraft.world.World;
 
 public class ModItemMagnetGun extends ModItem{
 
-	public ModItemMagnetGun(String name) {
-		super(name);
+	public ModItemMagnetGun(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}

@@ -22,7 +22,7 @@ public class MEventBinoculars {
         
         if(heldItem != null && heldItem.getItem() == MItems.binoculars) {
         	GuiBinoculars gui = new GuiBinoculars();
-        	gui.RenderGui();
+        	gui.RenderGui(event.resolution);
         }
 	}
 

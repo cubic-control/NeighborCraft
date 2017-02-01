@@ -23,21 +23,31 @@ item.key_golden.name=Golden Key
 item.iron_magnetized.name=Magnetized Iron
 item.magnet.name=Magnet
 item.nail.name=Nail
+item.key_base.name=Key Base
+item.base_lock.name=Lock Base
+item.hammer_head.name=Hammer Head
+item.hammer_handle.name=Hammer Handle
 
 //Blocks
     //Pre-Alpha
+tile.bear_trap.name=Bear Trap
+tile.camera.name=Camera
 tile.lock_rusty.name=Rusty Lock
     //Alpha 1
 tile.grave.name=Grave
     //Alpha 2
 tile.door_white.name=White Door
+tile.milk.name=Gallon Of Milk
 tile.lock_red.name=Red Lock
 tile.TechLock.name=K.A.L.
     //Alpha 3
 tile.door_golden.name=Golden Door
+tile.lock_blue.name=Blue Lock
+tile.lock_golden.name=Golden Lock
     //Custom
 tile.barricade_double.name=Double Barricade
 tile.barricade_single.name=Single Barricade
+tile.invisible_light.name=Invisible Light
 
 //CreativeTabs
 itemGroup.tabAll=NeighborCraft
@@ -45,3 +55,4 @@ itemGroup.tabAll=NeighborCraft
 //Entity
 entity.hnm.Neighbor.name=Neighbor
 entity.hnm.Bullet.name=Bullet
+entity.hnm.Shadow.name=Shadow

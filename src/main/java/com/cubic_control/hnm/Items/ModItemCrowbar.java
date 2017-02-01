@@ -29,8 +29,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItemCrowbar extends ModItem{
 
-	public ModItemCrowbar(String name) {
-		super(name);
+	public ModItemCrowbar(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}
@@ -40,7 +40,7 @@ public class ModItemCrowbar extends ModItem{
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		Block block = world.getBlock(x, y, z);
 		TileEntity tile = world.getTileEntity(x, y, z);
-		ItemStack parStack = new ItemStack(MItems.nail, 1);
+		ItemStack parStack = new ItemStack(MItems.nail);
 		EntityItem parEntity = new EntityItem(world, x, y, z, parStack);
 		Random rand = new Random();
 		if(block == MBlocks.barricade_double){
@@ -49,7 +49,9 @@ public class ModItemCrowbar extends ModItem{
 			}else{
 				world.playSoundAtEntity(player, RefStrings.MODID + ":nail.eject.1", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 			}
-			world.spawnEntityInWorld(parEntity);
+			if(!world.isRemote){
+				world.spawnEntityInWorld(parEntity);
+			}
 			int hits = ((TileEntityBarricadeDouble) tile).getTimesHit();
 			if(hits >= 7){
 				world.setBlock(x, y, z, Blocks.air);
@@ -66,7 +68,9 @@ public class ModItemCrowbar extends ModItem{
 			}else{
 				world.playSoundAtEntity(player, RefStrings.MODID + ":nail.eject.1", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 			}
-			world.spawnEntityInWorld(parEntity);
+			if(!world.isRemote){
+				world.spawnEntityInWorld(parEntity);
+			}
 			int hits = ((TileEntityBarricadeSingle) tile).getTimesHit();
 			if(hits >= 3){
 				world.setBlock(x, y, z, Blocks.air);

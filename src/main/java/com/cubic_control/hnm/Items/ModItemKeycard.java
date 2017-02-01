@@ -14,8 +14,8 @@ import com.cubic_control.hnm.Lib.RefStrings;
 
 public class ModItemKeycard extends ModItem{
 
-	public ModItemKeycard(String name) {
-		super(name);
+	public ModItemKeycard(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}

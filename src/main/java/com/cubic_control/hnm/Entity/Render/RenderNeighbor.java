@@ -1,5 +1,6 @@
 package com.cubic_control.hnm.Entity.Render;
 
+import com.cubic_control.hnm.Configuration.MConfig;
 import com.cubic_control.hnm.Lib.RefStrings;
 
 import net.minecraft.client.model.ModelBase;
@@ -13,8 +14,11 @@ public class RenderNeighbor extends RenderLiving{
 
 	public RenderNeighbor(ModelBase par1ModelBase, float par2) {
 		super(par1ModelBase, par2);
-		
-		entityTexture = new ResourceLocation(RefStrings.MODID + ":textures/entity/neighbor.png");
+		if(MConfig.valentinesMode){
+			entityTexture = new ResourceLocation(RefStrings.MODID + ":textures/entity/v_neighbor.png");
+		}else{
+			entityTexture = new ResourceLocation(RefStrings.MODID + ":textures/entity/neighbor.png");
+		}
 	}
 
 	@Override

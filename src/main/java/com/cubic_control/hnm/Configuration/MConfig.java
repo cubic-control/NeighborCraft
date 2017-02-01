@@ -21,6 +21,7 @@ public class MConfig extends Configuration{
 	public static boolean isPlayerFasterThanNeighbor;
 	public static boolean canGetKeyFromNeighbor;
 	public static boolean doItemsUse3DModels;
+	public static boolean valentinesMode;
 
 	/**
 	 * Creates Config file in custom folder in .minecraft folder.
@@ -61,6 +62,7 @@ public class MConfig extends Configuration{
 		isPlayerFasterThanNeighbor = config.getBoolean("isPlayerFasterThanNeighbor", ConfigTypes.BOOLEANS, false, "if true, the player is faster than the neighbor.");
 		canGetKeyFromNeighbor = config.getBoolean("canGetKeyFromNeighbor", ConfigTypes.BOOLEANS, true, "sets if you can get a red key from the neighbor by shift-right clicking him.");
 		doItemsUse3DModels = config.getBoolean("doItemsUse3DModels", ConfigTypes.BOOLEANS, true, "makes the items in the mod use 3D models.");
+		valentinesMode = config.getBoolean("valentinesMode", ConfigTypes.BOOLEANS, false, "puts the neighbor in valentines mode(He's PINK!).");
 	}
 	
 	public static void addInts(){

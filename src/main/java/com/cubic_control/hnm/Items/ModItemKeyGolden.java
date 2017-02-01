@@ -13,8 +13,8 @@ import com.cubic_control.hnm.Lib.RefStrings;
 
 public class ModItemKeyGolden extends ModItem{
 
-	public ModItemKeyGolden(String name) {
-		super(name);
+	public ModItemKeyGolden(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}

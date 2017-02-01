@@ -16,8 +16,8 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 public class ModItemRifle extends ModItem{
 
-	public ModItemRifle(String name) {
-		super(name);
+	public ModItemRifle(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}

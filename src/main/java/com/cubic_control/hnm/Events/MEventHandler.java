@@ -8,6 +8,8 @@ public class MEventHandler {
 		MinecraftForge.EVENT_BUS.register(new MEventZoom());
 		FMLCommonHandler.instance().bus().register(new MEventBearTrap());
 		MinecraftForge.EVENT_BUS.register(new MEventBinoculars());
+		FMLCommonHandler.instance().bus().register(new MEventFlashlight());
+		MinecraftForge.EVENT_BUS.register(new MEventMonoculars());
 	}
 
 }

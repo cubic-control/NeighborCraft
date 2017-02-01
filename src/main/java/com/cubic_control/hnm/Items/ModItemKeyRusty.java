@@ -12,8 +12,8 @@ import com.cubic_control.hnm.Lib.RefStrings;
 
 public class ModItemKeyRusty extends ModItem{
 
-	public ModItemKeyRusty(String name) {
-		super(name);
+	public ModItemKeyRusty(String name, float f1) {
+		super(name, f1);
 	}
 	
 	@Override

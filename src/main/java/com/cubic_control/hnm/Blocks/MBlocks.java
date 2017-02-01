@@ -15,6 +15,8 @@ public class MBlocks {
 	public static Block gallon_of_milk;
 	public static Block padlock_red;
 	public static Block TechLock;
+	
+	public static Block wood_turquoise;
 	//Alpha 3
 	public static Block door_golden;
 	public static Block padlock_blue;
@@ -22,6 +24,7 @@ public class MBlocks {
 	//Custom
 	public static Block barricade_double;
 	public static Block barricade_single;
+	public static Block invisible_light;
 	
 	public static void createBlocks(){
 		//Pre-Alpha
@@ -35,6 +38,8 @@ public class MBlocks {
 		gallon_of_milk = new ModBlockGallonOfMilk("milk");
 		padlock_red = new ModBlockPadlockRed("lock_red");
 		TechLock = new ModBlockKAL("TechLock");
+		
+		wood_turquoise = new ModBlock(Material.wood, "wood_turquoise_dif", 2f, "axe", 0, 15f, Block.soundTypeWood);
 		//Alpha 3
 		door_golden = new ModBlockDoor(Material.wood, 3f, 30f, "axe", 0, Block.soundTypeWood, "door_golden");
 		padlock_blue = new ModBlockPadlockBlue("lock_blue");
@@ -42,5 +47,6 @@ public class MBlocks {
 		//Custom
 		barricade_double = new ModBlockBarricadeDouble("barricade_double");
 		barricade_single = new ModBlockBarricadeSingle("barricade_single");
+		invisible_light = new ModBlockInvisibleLight("invisible_light");
 	}
 }

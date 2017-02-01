@@ -15,8 +15,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModItemBinoculars extends ModItem implements IZoom{
 
-	public ModItemBinoculars(String name) {
-		super(name);
+	public ModItemBinoculars(String name, float f1) {
+		super(name, f1);
 	}
 	
 	public boolean isItemTool(ItemStack stack) {

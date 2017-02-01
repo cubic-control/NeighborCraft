@@ -13,8 +13,8 @@ import net.minecraft.world.World;
 
 public class ModItemLockpick extends ModItem{
 
-	public ModItemLockpick(String name) {
-		super(name);
+	public ModItemLockpick(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}

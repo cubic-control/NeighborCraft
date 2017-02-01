@@ -21,18 +21,22 @@ import com.cubic_control.hnm.Entity.Render.RenderFlashlight;
 import com.cubic_control.hnm.Entity.Render.RenderGallonOfMilk;
 import com.cubic_control.hnm.Entity.Render.RenderGoldenKey;
 import com.cubic_control.hnm.Entity.Render.RenderGrave;
-import com.cubic_control.hnm.Entity.Render.RenderHammer;
-import com.cubic_control.hnm.Entity.Render.RenderMagnetGun;
+import com.cubic_control.hnm.Entity.Render.RenderKey_card;
+import com.cubic_control.hnm.Entity.Render.RenderKey_rr;
+import com.cubic_control.hnm.Entity.Render.RenderNailPuller;
+import com.cubic_control.hnm.Entity.Render.RenderLockPick;
+import com.cubic_control.hnm.Entity.Render.RenderElectromagnet;
 import com.cubic_control.hnm.Entity.Render.RenderNeighbor;
 import com.cubic_control.hnm.Entity.Render.RenderPadlockBlue;
 import com.cubic_control.hnm.Entity.Render.RenderPadlockGolden;
 import com.cubic_control.hnm.Entity.Render.RenderRedKey;
 import com.cubic_control.hnm.Entity.Render.RenderRedPadlock;
 import com.cubic_control.hnm.Entity.Render.RenderRifle;
-import com.cubic_control.hnm.Entity.Render.RenderRustyKey;
+import com.cubic_control.hnm.Entity.Render.RenderKey;
 import com.cubic_control.hnm.Entity.Render.RenderRustyPadlock;
 import com.cubic_control.hnm.Entity.Render.RenderShadow;
 import com.cubic_control.hnm.Entity.Render.RenderTechLock;
+import com.cubic_control.hnm.Entity.Render.RenderWrench;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeDouble;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeSingle;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBearTrap;
@@ -70,14 +74,18 @@ public class ClientProxy extends ServerProxy{
 			//Pre-Alpha
 			MinecraftForgeClient.registerItemRenderer(MItems.binoculars, new RenderBinoculars());
 			MinecraftForgeClient.registerItemRenderer(MItems.flashlight, new RenderFlashlight());
-			MinecraftForgeClient.registerItemRenderer(MItems.hammer, new RenderHammer());
-			MinecraftForgeClient.registerItemRenderer(MItems.key_rusty, new RenderRustyKey());
+			MinecraftForgeClient.registerItemRenderer(MItems.hammer, new RenderNailPuller());
+			MinecraftForgeClient.registerItemRenderer(MItems.key_rusty, new RenderKey());
 			//Alpha 1
 			MinecraftForgeClient.registerItemRenderer(MItems.crowbar, new RenderCrowbar());
 			MinecraftForgeClient.registerItemRenderer(MItems.rifle, new RenderRifle());
 			//Alpha 2
-			MinecraftForgeClient.registerItemRenderer(MItems.magnet_gun, new RenderMagnetGun());
+			MinecraftForgeClient.registerItemRenderer(MItems.keycard, new RenderKey_card());
+			MinecraftForgeClient.registerItemRenderer(MItems.lockpick, new RenderLockPick());
+			MinecraftForgeClient.registerItemRenderer(MItems.magnet_gun, new RenderElectromagnet());
 			MinecraftForgeClient.registerItemRenderer(MItems.key_red, new RenderRedKey());
+			MinecraftForgeClient.registerItemRenderer(MItems.wrench, new RenderWrench());
+			MinecraftForgeClient.registerItemRenderer(MItems.key_sun, new RenderKey_rr());
 			//Alpha 3
 			MinecraftForgeClient.registerItemRenderer(MItems.key_blue, new RenderBlueKey());
 			MinecraftForgeClient.registerItemRenderer(MItems.key_golden, new RenderGoldenKey());

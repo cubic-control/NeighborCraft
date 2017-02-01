@@ -13,8 +13,8 @@ import net.minecraft.world.World;
 
 public class ModItemDoor extends ModItem{
 
-	public ModItemDoor(String name) {
-		super(name);
+	public ModItemDoor(String name, float f1) {
+		super(name, f1);
 		if(MConfig.useRealisticTextures){
 			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
 		}
