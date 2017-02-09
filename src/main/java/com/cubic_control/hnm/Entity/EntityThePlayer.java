@@ -28,7 +28,9 @@ import net.minecraft.entity.ai.EntityAIRestrictOpenDoor;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.passive.EntityAmbientCreature;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -37,12 +39,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
-public class EntityNeighbor extends EntityMob{
+public class EntityThePlayer extends EntityFakeMob{
 
-	public EntityNeighbor(World par1World) {
+	public EntityThePlayer(World par1World) {
 		super(par1World);
 		this.getNavigator().setBreakDoors(true);
 		this.getNavigator().setEnterDoors(true);
+		this.tasks.addTask(0, new EntityAIAvoidEntity(this, EntityNeighbor.class, 5.0F, 1.0D, 1.5D));
 		this.tasks.addTask(1, new EntityAISwimming(this));
 		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(3, new EntityAIMoveIndoors(this));
@@ -53,8 +56,7 @@ public class EntityNeighbor extends EntityMob{
 		this.tasks.addTask(7, new EntityAIAttackOnCollide(this, 1.0D, true));
 		this.tasks.addTask(7, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
-		this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityThePlayer.class, 0, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, true, false, IMob.mobSelector));
 	}
 	
 	@Override
@@ -69,27 +71,14 @@ public class EntityNeighbor extends EntityMob{
 	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         if(MConfig.isPlayerFasterThanNeighbor){
-        	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
+        	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.30D);
         }else{
-        	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
+        	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20D);
         }
         
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(35.0D);
-        
-        if(MConfig.hardcoreNeighbor){
-        	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(2000.0D);
-        	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(32.0D);
-        }else{
-        	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
-        	
-        	if(this.worldObj.difficultySetting == EnumDifficulty.EASY){
-            	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(8.0D);
-            }else if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL){
-            	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(12.0D);
-            }else if(this.worldObj.difficultySetting == EnumDifficulty.HARD){
-            	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(16.0D);
-            }
-        }
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(8.0D);
     }
 	
 	@Override
@@ -100,11 +89,13 @@ public class EntityNeighbor extends EntityMob{
 	public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
         data = super.onSpawnWithEgg(data);
         
+        addRandomArmor();
+        
         return data;
     }
 	
 	protected Item getDropItem() {
-        return MItems.key_red;
+        return MItems.crowbar;
     }
 	
 	/**
@@ -125,23 +116,8 @@ public class EntityNeighbor extends EntityMob{
 	
 	@Override
     protected boolean canDespawn() {
-     return true;
+		return true;
     }
-	
-	@Override
-	protected String getHurtSound() {
-		Random rand = new Random();
-		if(rand.nextInt() < 5){
-			return RefStrings.MODID + ":neighbor.hurt";
-		}else{
-			return RefStrings.MODID + ":neighbor.hurt.1";
-		}
-    }
-	
-	//@Override
-	//protected String getLivingSound() {
-		//return RefStrings.MODID + ":neighbor.gasp";
-	//}
 	
 	@Override
 	public void onUpdate() {
@@ -154,15 +130,52 @@ public class EntityNeighbor extends EntityMob{
 		}
 	}
 	
-	@Override
-	public boolean interact(EntityPlayer par1EntityPlayer){
-		ItemStack itemstack = par1EntityPlayer.inventory.getCurrentItem();
-		
-		if(par1EntityPlayer.isSneaking() && this.isEntityAlive() && itemstack == null && MConfig.canGetKeyFromNeighbor){
-			par1EntityPlayer.inventory.setInventorySlotContents(par1EntityPlayer.inventory.currentItem, new ItemStack(MItems.key_red));
-			return true;
-		}else{
-			return false;
+	protected void addRandomArmor() {
+		switch(this.rand.nextInt(15)){
+			case 0:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.binoculars));
+				break;
+			case 1:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.crowbar));
+				break;
+			case 2:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.flashlight));
+				break;
+			case 3:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.hammer));
+				break;
+			case 4:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.key_blue));
+				break;
+			case 5:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.key_golden));
+				break;
+			case 6:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.key_red));
+				break;
+			case 7:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.key_rusty));
+				break;
+			case 8:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.key_sun));
+				break;
+			case 9:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.keycard));
+				break;
+			case 10:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.lockpick));
+				break;
+			case 11:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.magnet_gun));
+				break;
+			case 12:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.rifle));
+				break;
+			case 13:
+				this.setCurrentItemOrArmor(0, new ItemStack(MItems.wrench));
+				break;
+			case 14:
+				break;
 		}
 	}
 

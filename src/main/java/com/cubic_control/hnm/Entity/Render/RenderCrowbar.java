@@ -67,7 +67,7 @@ public class RenderCrowbar implements IItemRenderer{
 			//GL11.glRotatef(180F, 0.0f, 0.0f, 1.0f);
 			GL11.glRotatef(90F, 0.0f, 1.0f, 0.0f);
 			//GL11.glRotatef(-20F, 1.0f, 0.0f, 0.0f);
-			GL11.glTranslatef(10.0f, 5.0f, -10.0f);
+			GL11.glTranslatef(25.0f, 35.0f, 20.0f);
 			break;
 		case INVENTORY:
 			break;

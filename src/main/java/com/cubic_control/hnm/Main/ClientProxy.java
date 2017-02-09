@@ -7,6 +7,7 @@ import com.cubic_control.hnm.Configuration.MConfig;
 import com.cubic_control.hnm.Entity.EntityBullet;
 import com.cubic_control.hnm.Entity.EntityNeighbor;
 import com.cubic_control.hnm.Entity.EntityShadow;
+import com.cubic_control.hnm.Entity.EntityThePlayer;
 import com.cubic_control.hnm.Entity.Model.ModelBiped64x64;
 import com.cubic_control.hnm.Entity.Model.ModelBullet;
 import com.cubic_control.hnm.Entity.Render.RenderBarricadeDouble;
@@ -36,6 +37,7 @@ import com.cubic_control.hnm.Entity.Render.RenderKey;
 import com.cubic_control.hnm.Entity.Render.RenderRustyPadlock;
 import com.cubic_control.hnm.Entity.Render.RenderShadow;
 import com.cubic_control.hnm.Entity.Render.RenderTechLock;
+import com.cubic_control.hnm.Entity.Render.RenderThePlayer;
 import com.cubic_control.hnm.Entity.Render.RenderWrench;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeDouble;
 import com.cubic_control.hnm.Entity.TileEntity.TileEntityBarricadeSingle;
@@ -66,6 +68,7 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityNeighbor.class, new RenderNeighbor(new ModelBiped64x64(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBullet.class, new RenderBullet(new ModelBullet(), 0.5f));
 		RenderingRegistry.registerEntityRenderingHandler(EntityShadow.class, new RenderShadow(new ModelBiped(), 0.5f));
+		RenderingRegistry.registerEntityRenderingHandler(EntityThePlayer.class, new RenderThePlayer(new ModelBiped64x64(), 0.5f));
 	}
 	public ModelBiped getArmorModel(int id){ return null; }
 	

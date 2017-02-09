@@ -61,14 +61,14 @@ public class ModelBiped64x64 extends ModelBase
         this.bipedRightArm.addBox(-3.0F, -2.0F, -2.0F, 4, 12, 4, par1);
         this.bipedRightArm.setRotationPoint(-5.0F, 2.0F + par2, 0.0F);
         this.bipedLeftArm = new ModelRenderer(this, 32, 48);
-        this.bipedLeftArm.mirror = true;
+        //this.bipedLeftArm.mirror = true;
         this.bipedLeftArm.addBox(-1.0F, -2.0F, -2.0F, 4, 12, 4, par1);
         this.bipedLeftArm.setRotationPoint(5.0F, 2.0F + par2, 0.0F);
         this.bipedRightLeg = new ModelRenderer(this, 0, 16);
         this.bipedRightLeg.addBox(-2.0F, 0.0F, -2.0F, 4, 12, 4, par1);
         this.bipedRightLeg.setRotationPoint(-1.9F, 12.0F + par2, 0.0F);
         this.bipedLeftLeg = new ModelRenderer(this, 16, 48);
-        this.bipedLeftLeg.mirror = true;
+        //this.bipedLeftLeg.mirror = true;
         this.bipedLeftLeg.addBox(-2.0F, 0.0F, -2.0F, 4, 12, 4, par1);
         this.bipedLeftLeg.setRotationPoint(1.9F, 12.0F + par2, 0.0F);
     }

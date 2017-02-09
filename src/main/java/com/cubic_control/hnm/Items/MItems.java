@@ -67,6 +67,7 @@ public class MItems {
 		//All
 		spawn_egg = new ModItemMonsterPlacer("Neighbor", 0xFBFF87, 0x879DFF, "Neighbor");
 		spawn_egg = new ModItemMonsterPlacer("Shadow", 0x000000, 0x595959, "Shadow");
+		spawn_egg = new ModItemMonsterPlacer("Player", 0xFFFFFF, 0xFF3B3B, "Player");
 		//Custom
 		iron_magnetized = new ModItem("iron_magnetized", 0.4f);
 		magnet = new ModItem("magnet", 0.6f);
