@@ -33,8 +33,6 @@ public class MEventFlashlight {
 					if(mop != null){
 						if(stack == player.getItemInUse()){
 							ModUtils.addLight(world, mop, player);
-						}else{
-							ModUtils.updateLight(world, mop);
 						}
 					}
 				}

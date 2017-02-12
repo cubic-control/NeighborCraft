@@ -6,6 +6,7 @@ import java.util.Set;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -31,11 +32,10 @@ public class ModItemCrowbar extends ModItem{
 
 	public ModItemCrowbar(String name, float f1) {
 		super(name, f1);
-		if(MConfig.useRealisticTextures){
-			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
-		}
 	}
-	
+	public ModItemCrowbar(String name, String tex, float f1) {
+		super(name, tex, f1);
+	}
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		Block block = world.getBlock(x, y, z);

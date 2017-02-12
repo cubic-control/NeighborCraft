@@ -15,9 +15,6 @@ public class ModItemDoor extends ModItem{
 
 	public ModItemDoor(String name, float f1) {
 		super(name, f1);
-		if(MConfig.useRealisticTextures){
-			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
-		}
 	}
 	
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int i1, int i2, int i3, int i4, float f1, float f2, float f3)

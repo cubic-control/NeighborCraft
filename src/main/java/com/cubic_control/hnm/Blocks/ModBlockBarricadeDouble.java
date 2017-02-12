@@ -99,5 +99,5 @@ public class ModBlockBarricadeDouble extends BlockContainer {
 		}else{
 			this.setBlockBounds(0.0F, 0.0F, 0.9F, 1.0F, 1.0F, 1.0F);
 		}
-	} 
+	}
 }

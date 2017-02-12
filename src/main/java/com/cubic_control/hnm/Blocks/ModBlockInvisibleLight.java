@@ -23,7 +23,7 @@ public class ModBlockInvisibleLight extends BlockBreakable{
 	protected ModBlockInvisibleLight(String name) {
 		super(RefStrings.MODID + ":" + name, Material.glass, false);
 		this.setBlockName(name);
-		this.setCreativeTab(null);
+		this.setCreativeTab(MCreativeTabs.tabAll);
 		this.setHardness(0f);
 		this.setLightLevel(1.0f);
 		this.setLightOpacity(0);

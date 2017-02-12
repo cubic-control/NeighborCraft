@@ -16,9 +16,6 @@ public class ModItemKeycard extends ModItem{
 
 	public ModItemKeycard(String name, float f1) {
 		super(name, f1);
-		if(MConfig.useRealisticTextures){
-			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
-		}
 	}
 	//@Override
 	//public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {

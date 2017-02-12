@@ -56,7 +56,6 @@ public class EntityNeighbor extends EntityMob{
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 		this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityThePlayer.class, 0, true));
 	}
-	
 	@Override
 	protected void entityInit() {
         super.entityInit();
@@ -64,7 +63,6 @@ public class EntityNeighbor extends EntityMob{
         this.getDataWatcher().addObject(16, Byte.valueOf((byte)0));
         this.getDataWatcher().addObject(17, Byte.valueOf((byte)0));
     }
-	
 	@Override
 	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
@@ -91,22 +89,20 @@ public class EntityNeighbor extends EntityMob{
             }
         }
     }
-	
 	@Override
 	public boolean isAIEnabled() {
         return true;
     }
-	
+	@Override
 	public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
         data = super.onSpawnWithEgg(data);
         
         return data;
     }
-	
+	@Override
 	protected Item getDropItem() {
         return MItems.key_red;
     }
-	
 	/**
      * Get this Entity's EnumCreatureAttribute
      */
@@ -114,7 +110,6 @@ public class EntityNeighbor extends EntityMob{
     public EnumCreatureAttribute getCreatureAttribute() {
         return EnumCreatureAttribute.UNDEFINED;
     }
-	
 	@Override
     public boolean getCanSpawnHere() {
 		if(worldObj.villageCollectionObj.getVillageList().iterator().hasNext() && worldObj.villageCollectionObj.findNearestVillage((int)this.posX, (int)this.posY, (int)this.posZ, 10) == null) {
@@ -122,12 +117,10 @@ public class EntityNeighbor extends EntityMob{
 		}
 		return true;
     }
-	
 	@Override
     protected boolean canDespawn() {
      return true;
     }
-	
 	@Override
 	protected String getHurtSound() {
 		Random rand = new Random();
@@ -137,12 +130,10 @@ public class EntityNeighbor extends EntityMob{
 			return RefStrings.MODID + ":neighbor.hurt.1";
 		}
     }
-	
 	//@Override
 	//protected String getLivingSound() {
 		//return RefStrings.MODID + ":neighbor.gasp";
 	//}
-	
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
@@ -153,7 +144,6 @@ public class EntityNeighbor extends EntityMob{
 			return;
 		}
 	}
-	
 	@Override
 	public boolean interact(EntityPlayer par1EntityPlayer){
 		ItemStack itemstack = par1EntityPlayer.inventory.getCurrentItem();

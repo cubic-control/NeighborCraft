@@ -55,7 +55,6 @@ public class EntityShadow extends EntityMob{
 		this.tasks.addTask(7, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 	}
-	
 	@Override
 	protected void entityInit() {
         super.entityInit();
@@ -63,7 +62,6 @@ public class EntityShadow extends EntityMob{
         this.getDataWatcher().addObject(16, Byte.valueOf((byte)0));
         this.getDataWatcher().addObject(17, Byte.valueOf((byte)0));
     }
-	
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
@@ -72,18 +70,16 @@ public class EntityShadow extends EntityMob{
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.5D);
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(8.5D);
     }
-	
 	@Override
 	public boolean isAIEnabled() {
         return true;
     }
-	
+	@Override
 	public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
         data = super.onSpawnWithEgg(data);
         
         return data;
     }
-	
 	/**
      * Get this Entity's EnumCreatureAttribute
      */

@@ -43,5 +43,10 @@ public class CraftingRecipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.flashlight), MItems.flashlight_lense, MItems.flashlight_handle);
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.monoculars), " B ", "ORO", "BGB", 'B', new ItemStack(Blocks.wool, 15, 15), 'O', new ItemStack(Blocks.wool, 1, 1), 'R', Items.redstone, 'G', Blocks.glass_pane);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.binoculars), MItems.monoculars, MItems.monoculars);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.magnet_gun_v2), MItems.magnet_gun);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.magnet_gun), MItems.magnet_gun_v2);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.crowbar_v2), MItems.crowbar);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.crowbar), MItems.crowbar_v2);
+		GameRegistry.addShapedRecipe(new ItemStack(MItems.key_sun), " Z ", "XYX", " Z ", 'X', Items.iron_ingot, 'Y', MItems.base_key, 'Z', Items.gold_nugget);
 	}
 }

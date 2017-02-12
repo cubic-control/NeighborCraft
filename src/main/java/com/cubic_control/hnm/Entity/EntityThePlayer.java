@@ -58,7 +58,6 @@ public class EntityThePlayer extends EntityFakeMob{
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, true, false, IMob.mobSelector));
 	}
-	
 	@Override
 	protected void entityInit() {
         super.entityInit();
@@ -66,7 +65,6 @@ public class EntityThePlayer extends EntityFakeMob{
         this.getDataWatcher().addObject(16, Byte.valueOf((byte)0));
         this.getDataWatcher().addObject(17, Byte.valueOf((byte)0));
     }
-	
 	@Override
 	protected void applyEntityAttributes() {
         super.applyEntityAttributes();
@@ -75,17 +73,15 @@ public class EntityThePlayer extends EntityFakeMob{
         }else{
         	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20D);
         }
-        
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(35.0D);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(8.0D);
     }
-	
 	@Override
 	public boolean isAIEnabled() {
         return true;
     }
-	
+	@Override
 	public IEntityLivingData onSpawnWithEgg(IEntityLivingData data) {
         data = super.onSpawnWithEgg(data);
         
@@ -93,11 +89,10 @@ public class EntityThePlayer extends EntityFakeMob{
         
         return data;
     }
-	
+	@Override
 	protected Item getDropItem() {
         return MItems.crowbar;
     }
-	
 	/**
      * Get this Entity's EnumCreatureAttribute
      */
@@ -105,7 +100,6 @@ public class EntityThePlayer extends EntityFakeMob{
     public EnumCreatureAttribute getCreatureAttribute() {
         return EnumCreatureAttribute.UNDEFINED;
     }
-	
 	@Override
     public boolean getCanSpawnHere() {
 		if(worldObj.villageCollectionObj.getVillageList().iterator().hasNext() && worldObj.villageCollectionObj.findNearestVillage((int)this.posX, (int)this.posY, (int)this.posZ, 10) == null) {
@@ -113,12 +107,10 @@ public class EntityThePlayer extends EntityFakeMob{
 		}
 		return true;
     }
-	
 	@Override
     protected boolean canDespawn() {
 		return true;
     }
-	
 	@Override
 	public void onUpdate() {
 		super.onUpdate();

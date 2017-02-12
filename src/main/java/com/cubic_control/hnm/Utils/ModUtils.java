@@ -1,5 +1,7 @@
 package com.cubic_control.hnm.Utils;
 
+import com.cubic_control.hnm.Events.MEventBinoculars;
+
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MovingObjectPosition;

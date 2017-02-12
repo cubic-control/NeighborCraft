@@ -18,9 +18,6 @@ public class ModItemRifle extends ModItem{
 
 	public ModItemRifle(String name, float f1) {
 		super(name, f1);
-		if(MConfig.useRealisticTextures){
-			this.setTextureName(RefStrings.MODID + ":realistic/" + name);
-		}
 	}
 	
 	public EnumAction getItemUseAction(ItemStack par1ItemStack)

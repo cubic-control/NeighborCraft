@@ -17,7 +17,6 @@ public class MConfig extends Configuration{
 	public static boolean hardcoreNeighbor;
 	public static boolean rifleRequiresBullets;
 	public static boolean doesRifleDoDamage;
-	public static boolean useRealisticTextures;
 	public static boolean isPlayerFasterThanNeighbor;
 	public static boolean canGetKeyFromNeighbor;
 	public static boolean doItemsUse3DModels;
@@ -58,11 +57,10 @@ public class MConfig extends Configuration{
 		hardcoreNeighbor = config.getBoolean("hardcoreNeighbor", ConfigTypes.BOOLEANS, false, "makes the neighbor realy strong.");
 		rifleRequiresBullets = config.getBoolean("rifleRequiresBullets", ConfigTypes.BOOLEANS, false, "makes the rifle require bullets too shoot.");
 		doesRifleDoDamage = config.getBoolean("doesRifleDoDamage", ConfigTypes.BOOLEANS, false, "makes the rifle bullets do damage.");
-		useRealisticTextures = config.getBoolean("useRealisticTextures", ConfigTypes.BOOLEANS, true, "makes the items use more realistic textures.[Requires Restart]");
 		isPlayerFasterThanNeighbor = config.getBoolean("isPlayerFasterThanNeighbor", ConfigTypes.BOOLEANS, false, "if true, the player is faster than the neighbor.");
 		canGetKeyFromNeighbor = config.getBoolean("canGetKeyFromNeighbor", ConfigTypes.BOOLEANS, true, "sets if you can get a red key from the neighbor by shift-right clicking him.");
 		doItemsUse3DModels = config.getBoolean("doItemsUse3DModels", ConfigTypes.BOOLEANS, true, "makes the items in the mod use 3D models.");
-		valentinesMode = config.getBoolean("valentinesMode", ConfigTypes.BOOLEANS, false, "puts the neighbor in valentines mode(He's PINK!).");
+		valentinesMode = config.getBoolean("valentinesMode", ConfigTypes.BOOLEANS, false, "puts the neighbor and player in valentines mode(there PINK AND PURPLE!).");
 	}
 	
 	public static void addInts(){

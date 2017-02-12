@@ -10,16 +10,19 @@ item.rifle.name=Rifle
     //Alpha 2
 item.bullet.name=Bullet
 item.door_white.name=White Door
-item.key_red.name=Red Key
+item.gallon_of_milk.name=Gallon Of Milk
 item.keycard.name=Key Card
+item.key_red.name=Red Key
+item.key_sun.name=Sun Key
 item.lockpick.name=Lock Pick
 item.magnet_gun.name=Magnet Gun
 item.wrench.name=Wrench
-item.key_sun.name=Sun Key
     //Alpha 3
+item.crowbar_v2.name=Crowbar
 item.door_golden.name=Golden Door
 item.key_blue.name=Blue Key
 item.key_golden.name=Golden Key
+item.magnet_gun_v2.name=Magnet Gun
     //All
 item.spawn_egg_neighbor.name=Spawn Neighbor
 item.spawn_egg_shadow.name=Spawn Shadow
@@ -57,7 +60,7 @@ tile.lock_golden.name=Golden Lock
     //Custom
 tile.barricade_double.name=Double Barricade
 tile.barricade_single.name=Single Barricade
-tile.invisible_light.name=Invisible Light
+tile.invisible_light.name=Invisible Light(For map makers)
 
 //CreativeTabs
 itemGroup.tabAll=NeighborCraft

@@ -17,16 +17,19 @@ public class MItems {
 	//Alpha 2
 	public static Item bullet;
 	public static Item door_white;
+	public static Item gallon_of_milk;
 	public static Item keycard;
+	public static Item key_red;
+	public static Item key_sun;
 	public static Item lockpick;
 	public static Item magnet_gun;
-	public static Item key_red;
 	public static Item wrench;
-	public static Item key_sun;
 	//Alpha 3
+	public static Item crowbar_v2;
 	public static Item door_golden;
 	public static Item key_blue;
 	public static Item key_golden;
+	public static Item magnet_gun_v2;
 	//All
 	public static Item spawn_egg;
 	//Custom
@@ -54,16 +57,19 @@ public class MItems {
 		//Alpha 2
 		bullet = new ModItem("bullet", 0.5f);
 		door_white = new ModItemDoor("door_white", 1.0f);
-		key_red = new ModItemKeyRed("key_red", 1.5f);
+		gallon_of_milk = new ModItemGallonOfMilk("gallon_of_milk", 0.7f);
 		keycard = new ModItemKeycard("keycard", 0.3f);
-		lockpick = new ModItemLockpick("lockpick", 1.3f).setFull3D();
-		magnet_gun = new ModItemMagnetGun("magnet_gun", 1.8f);
-		wrench = new ModItemWrench("wrench", 3.0f).setFull3D();
+		key_red = new ModItemKeyRed("key_red", 1.5f);
 		key_sun = new ModItem("key_sun", 1.3f);
+		lockpick = new ModItemLockpick("lockpick", 1.3f);
+		magnet_gun = new ModItemMagnetGun("magnet_gun", 1.8f);
+		wrench = new ModItemWrench("wrench", 3.0f);
 		//Alpha 3
+		crowbar_v2 = new ModItemCrowbar("crowbar_v2", 5.0f);
 		door_golden = new ModItemDoor("door_golden", 1.6f);
 		key_blue = new ModItemKeyBlue("key_blue", 1.1f);
 		key_golden = new ModItemKeyGolden("key_golden", 2.8f);
+		magnet_gun_v2 = new ModItemMagnetGun("magnet_gun_v2", 1.8f);
 		//All
 		spawn_egg = new ModItemMonsterPlacer("Neighbor", 0xFBFF87, 0x879DFF, "Neighbor");
 		spawn_egg = new ModItemMonsterPlacer("Shadow", 0x000000, 0x595959, "Shadow");
