@@ -53,9 +53,7 @@ public class RenderCrowbarV2 implements IItemRenderer{
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		GL11.glPushMatrix();
-        
-		Minecraft.getMinecraft().getTextureManager().bindTexture(textureLocation1);
-		//Minecraft.getMinecraft().getTextureManager().bindTexture(textureLocation2);
+		
 		GL11.glScalef(0.015f, 0.015f, 0.015f);
 		switch(type){
 		case ENTITY:
@@ -75,7 +73,10 @@ public class RenderCrowbarV2 implements IItemRenderer{
 			break;
 		}
 		
-		model.renderAll();
+		Minecraft.getMinecraft().getTextureManager().bindTexture(textureLocation1);
+		model.renderPart("0");
+		Minecraft.getMinecraft().getTextureManager().bindTexture(textureLocation2);
+		model.renderPart("1");
         
 		GL11.glPopMatrix(); 
 	}

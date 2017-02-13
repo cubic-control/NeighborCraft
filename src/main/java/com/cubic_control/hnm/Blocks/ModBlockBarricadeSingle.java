@@ -27,7 +27,7 @@ import com.cubic_control.hnm.Lib.RefStrings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ModBlockBarricadeSingle extends BlockContainer {
+public class ModBlockBarricadeSingle extends BlockContainer implements IBlock{
 	
 	protected ModBlockBarricadeSingle(String name) {
 		super(ModMaterial.barricade);
@@ -99,5 +99,9 @@ public class ModBlockBarricadeSingle extends BlockContainer {
 		}else{
 			this.setBlockBounds(0.0F, 0.5F, 0.9F, 1.0F, 0.7F, 1.0F);
 		}
+	}
+	@Override
+	public boolean blocksDoors() {
+		return true;
 	} 
 }

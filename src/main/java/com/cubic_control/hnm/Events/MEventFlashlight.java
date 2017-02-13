@@ -3,6 +3,7 @@ package com.cubic_control.hnm.Events;
 import com.cubic_control.hnm.Items.IForwardLight;
 import com.cubic_control.hnm.Items.IZoom;
 import com.cubic_control.hnm.Items.MItems;
+import com.cubic_control.hnm.Lib.RefStrings;
 import com.cubic_control.hnm.Utils.ModUtils;
 
 import net.minecraft.block.Block;

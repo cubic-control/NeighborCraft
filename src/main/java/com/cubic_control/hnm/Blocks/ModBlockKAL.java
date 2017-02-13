@@ -28,21 +28,8 @@ import com.cubic_control.hnm.Lib.RefStrings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ModBlockKAL extends BlockContainer {
-	public ModBlockKAL instance;
-	public boolean isPowered;
-	
-	public ModBlockKAL getInstance() {
-		return instance;
-	}
-	
-	public boolean isPowered() {
-		return isPowered;
-	}
-
-	public void setPowered(boolean isPowered) {
-		this.isPowered = isPowered;
-	}
+public class ModBlockKAL extends BlockContainer implements IBlock{
+	public boolean isActive = true;
 	
 	protected ModBlockKAL(String name) {
 		super(Material.iron);
@@ -112,19 +99,7 @@ public class ModBlockKAL extends BlockContainer {
 		}
 	}
 	@Override
-	public boolean canProvidePower() {
-		return true;
-	}
-	@Override
-	public int isProvidingStrongPower(IBlockAccess blockaccess, int i1, int i2, int i3, int side) {
-		return isProvidingWeakPower(blockaccess, i1, i2, i3, side);
-	}
-	@Override
-	public int isProvidingWeakPower(IBlockAccess blockaccess, int i, int j, int k, int side) {
-		if (!isPowered) {
-			return 0;
-		}else{
-			return 15;
-		}
+	public boolean blocksDoors() {
+		return isActive;
 	}
 }

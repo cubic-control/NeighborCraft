@@ -15,7 +15,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class ModBlockPadlockBlue extends BlockContainer{
+public class ModBlockPadlockBlue extends BlockContainer implements IBlock{
 
 	protected ModBlockPadlockBlue(String name) {
 		super(Material.iron);
@@ -84,5 +84,9 @@ public class ModBlockPadlockBlue extends BlockContainer{
 			this.setBlockBounds(0.05F, 0.0F, 0.85F, 0.35F, 0.5F, 1.0F);
 		}
 	}
+	@Override
+	public boolean blocksDoors() {
+		return true;
+	} 
 
 }
