@@ -92,10 +92,10 @@ public class ClientProxy extends ServerProxy{
 			MinecraftForgeClient.registerItemRenderer(MItems.wrench, new RenderWrench());
 			MinecraftForgeClient.registerItemRenderer(MItems.key_sun, new RenderKey_rr());
 			//Alpha 3
-			MinecraftForgeClient.registerItemRenderer(MItems.crowbar_v2, new RenderCrowbarV2());
+			//MinecraftForgeClient.registerItemRenderer(MItems.crowbar_v2, new RenderCrowbarV2());
 			MinecraftForgeClient.registerItemRenderer(MItems.key_blue, new RenderBlueKey());
 			MinecraftForgeClient.registerItemRenderer(MItems.key_golden, new RenderGoldenKey());
-			MinecraftForgeClient.registerItemRenderer(MItems.magnet_gun_v2, new RenderElectromagnetV2());
+			//MinecraftForgeClient.registerItemRenderer(MItems.magnet_gun_v2, new RenderElectromagnetV2());
 		}
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBarricadeDouble.class, new RenderBarricadeDouble());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBarricadeSingle.class, new RenderBarricadeSingle());

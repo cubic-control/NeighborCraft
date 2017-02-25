@@ -1,20 +1,14 @@
 package com.cubic_control.hnm.Events;
 
-import com.cubic_control.hnm.Items.IForwardLight;
-import com.cubic_control.hnm.Items.IZoom;
-import com.cubic_control.hnm.Items.MItems;
-import com.cubic_control.hnm.Lib.RefStrings;
-import com.cubic_control.hnm.Utils.ModUtils;
-
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
+
+import com.cubic_control.cubic_core.Utils.ModUtils;
+import com.cubic_control.hnm.Items.IForwardLight;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
@@ -33,7 +27,7 @@ public class MEventFlashlight {
 				
 					if(mop != null){
 						if(stack == player.getItemInUse()){
-							ModUtils.addLight(world, mop, player);
+							ModUtils.addLightToMOP(world, mop, player);
 						}
 					}
 				}

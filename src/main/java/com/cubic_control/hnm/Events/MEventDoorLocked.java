@@ -4,19 +4,13 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
+import com.cubic_control.cubic_core.Utils.ModUtils;
 import com.cubic_control.hnm.Blocks.IBlock;
-import com.cubic_control.hnm.Items.IForwardLight;
 import com.cubic_control.hnm.Lib.RefStrings;
-import com.cubic_control.hnm.Utils.ModUtils;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
@@ -31,7 +25,6 @@ public class MEventDoorLocked {
 			Block block = event.entityPlayer.worldObj.getBlock(event.x, event.y, event.z);
 			
 			if(block instanceof BlockDoor){
-				System.out.println(RefStrings.MODID + ":TESTING DOOR EVENTS");
 				Block[] blocks = new Block[6];
 				blocks = ModUtils.getBlocksAroundPoint(world, event.x, event.y, event.z);
 				Block[] blocksLower = new Block[6];
@@ -43,8 +36,11 @@ public class MEventDoorLocked {
 					Block block2 = blocks[i];
 					
 					if(block2 instanceof IBlock){
-						world.playSoundAtEntity(event.entityPlayer, RefStrings.MODID + ":door.locked", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
-						event.setCanceled(true);
+						boolean flag = ((IBlock) block2).blocksDoors();
+						if(flag){
+							world.playSoundAtEntity(event.entityPlayer, RefStrings.MODID + ":door.locked", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
+							event.setCanceled(true);
+						}
 					}
 				}
 				
@@ -52,8 +48,11 @@ public class MEventDoorLocked {
 					Block block2 = blocksLower[i];
 					
 					if(block2 instanceof IBlock){
-						world.playSoundAtEntity(event.entityPlayer, RefStrings.MODID + ":door.locked", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
-						event.setCanceled(true);
+						boolean flag = ((IBlock) block2).blocksDoors();
+						if(flag){
+							world.playSoundAtEntity(event.entityPlayer, RefStrings.MODID + ":door.locked", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
+							event.setCanceled(true);
+						}
 					}
 				}
 				
@@ -61,8 +60,11 @@ public class MEventDoorLocked {
 					Block block2 = blocksHigher[i];
 					
 					if(block2 instanceof IBlock){
-						world.playSoundAtEntity(event.entityPlayer, RefStrings.MODID + ":door.locked", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
-						event.setCanceled(true);
+						boolean flag = ((IBlock) block2).blocksDoors();
+						if(flag){
+							world.playSoundAtEntity(event.entityPlayer, RefStrings.MODID + ":door.locked", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
+							event.setCanceled(true);
+						}
 					}
 				}
 			}

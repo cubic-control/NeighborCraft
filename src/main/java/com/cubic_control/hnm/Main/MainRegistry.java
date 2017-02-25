@@ -1,5 +1,6 @@
 package com.cubic_control.hnm.Main;
 
+import com.cubic_control.cubic_core.Main.VersionChecker;
 import com.cubic_control.hnm.Blocks.MBlocks;
 import com.cubic_control.hnm.Configuration.MConfig;
 import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
@@ -9,13 +10,8 @@ import com.cubic_control.hnm.Events.MEventHandler;
 import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Lib.RefStrings;
 
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -23,8 +19,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid = RefStrings.MODID, name = RefStrings.NAME, version = RefStrings.VERSION, guiFactory = RefStrings.GUIFACTORY)
 public class MainRegistry {
@@ -33,6 +27,9 @@ public class MainRegistry {
 	
 	@Mod.Instance(RefStrings.MODID)
 	public static MainRegistry instance;
+	
+	public static VersionChecker versionChecker;
+	public static boolean haveWarnedVersionOutOfDate = false;
 	
 	@EventHandler
 	public static void Preload(FMLPreInitializationEvent PreEvent){
@@ -49,6 +46,11 @@ public class MainRegistry {
 	public static void load(FMLInitializationEvent event){
 		FMLCommonHandler.instance().bus().register(instance);
 		MEventHandler.registerEvents();
+		
+		MainRegistry.versionChecker = new VersionChecker(RefStrings.VERSION,
+				"");
+		Thread versionCheckThread = new Thread(MainRegistry.versionChecker, "Version Check");
+		versionCheckThread.start();
 	}
 	@EventHandler
 	public static void Postload(FMLPostInitializationEvent PostEvent){

@@ -87,6 +87,10 @@ public class ModBlockPadlockBlue extends BlockContainer implements IBlock{
 	@Override
 	public boolean blocksDoors() {
 		return true;
+	}
+	@Override
+	public boolean blocksChest() {
+		return true;
 	} 
 
 }

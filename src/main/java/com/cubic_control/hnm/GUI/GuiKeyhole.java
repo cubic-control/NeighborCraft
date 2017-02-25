@@ -1,16 +1,14 @@
 package com.cubic_control.hnm.GUI;
 
-import org.lwjgl.opengl.GL11;
-
-import com.cubic_control.hnm.Lib.RefStrings;
-import com.cubic_control.hnm.Utils.ModUtils;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
+
+import org.lwjgl.opengl.GL11;
+
+import com.cubic_control.cubic_core.Utils.ModUtils;
+import com.cubic_control.hnm.Lib.RefStrings;
 
 public class GuiKeyhole extends Gui{
 	protected static ResourceLocation resource;

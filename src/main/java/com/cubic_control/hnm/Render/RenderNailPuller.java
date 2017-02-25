@@ -63,8 +63,10 @@ public class RenderNailPuller implements IItemRenderer{
 			GL11.glTranslatef(25.0f, 35.0f, 0.0f);
 			break;
 		case EQUIPPED_FIRST_PERSON:
-			GL11.glRotatef(90F, 0.0f, 1.0f, 0.0f);
-			GL11.glTranslatef(25.0f, 35.0f, 20.0f);
+			GL11.glTranslatef(-35.0f, 35.0f, 20.0f);
+			GL11.glRotatef(90F, -6.0f, -3.0f, 0.0f);
+			GL11.glTranslatef(-35.0f, 55.0f, 30.0f);
+			GL11.glTranslatef(105.0f, -0.0f, -50.0f);
 			break;
 		case INVENTORY:
 			break;

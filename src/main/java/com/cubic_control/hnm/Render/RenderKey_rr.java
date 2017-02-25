@@ -64,10 +64,8 @@ public class RenderKey_rr implements IItemRenderer{
 			//GL11.glTranslatef(0.2f, -0.2f, -0.1f);
 			break;
 		case EQUIPPED_FIRST_PERSON:
-			//GL11.glRotatef(180F, 0.0f, 0.0f, 1.0f);
 			GL11.glRotatef(90F, 0.0f, 1.0f, 0.0f);
-			//GL11.glRotatef(-20F, 1.0f, 0.0f, 0.0f);
-			GL11.glTranslatef(45.0f, 35.0f, 20.0f);
+			GL11.glTranslatef(25.0f, 35.0f, 20.0f);
 			break;
 		case INVENTORY:
 			break;

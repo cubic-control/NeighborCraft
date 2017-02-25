@@ -10,5 +10,6 @@ package com.cubic_control.hnm.Blocks;
 public interface IBlock {
 	
 	public boolean blocksDoors();
+	public boolean blocksChest();
 
 }

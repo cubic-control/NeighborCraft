@@ -29,9 +29,9 @@ import com.cubic_control.hnm.Lib.RefStrings;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlockKAL extends BlockContainer implements IBlock{
-	public boolean isActive = true;
+	public boolean isActive;
 	
-	protected ModBlockKAL(String name) {
+	protected ModBlockKAL(String name, boolean isOn) {
 		super(Material.iron);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
 		this.setCreativeTab(MCreativeTabs.tabAll);
@@ -39,10 +39,17 @@ public class ModBlockKAL extends BlockContainer implements IBlock{
 		this.setResistance(30f);
 		this.setHarvestLevel("pickaxe", 0);
 		this.setStepSound(Block.soundTypeMetal);
-		this.setBlockName(name);
 		this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		this.setTickRandomly(true);
-		GameRegistry.registerBlock(this, name);
+		if(isOn){
+			this.setBlockName(name + "_on");
+			GameRegistry.registerBlock(this, name + "_on");
+		}else{
+			this.setBlockName(name + "_off");
+			GameRegistry.registerBlock(this, name + "_off");
+		}
+		
+		this.isActive = isOn;
 	}
 	@Override
 	public TileEntity createNewTileEntity(World world, int i1) {
@@ -101,5 +108,9 @@ public class ModBlockKAL extends BlockContainer implements IBlock{
 	@Override
 	public boolean blocksDoors() {
 		return isActive;
+	}
+	@Override
+	public boolean blocksChest() {
+		return false;
 	}
 }

@@ -19,6 +19,19 @@ public class ModBlock extends Block{
 		this.setResistance(resistance);
 		this.setStepSound(soundType);
 		GameRegistry.registerBlock(this, name);
+		
+		ModBlockStair stair = new ModBlockStair(this, name);
+		ModBlockSlab slab_double = new ModBlockSlab(true, this, name);
+		ModBlockSlab slab_single = new ModBlockSlab(false, this, name);
+		ModBlockFence fence = new ModBlockFence(name, this);
+	}
+	
+	public float getBlockHardness(){
+		return this.blockHardness;
+	}
+	
+	public float getBlockResistance(){
+		return this.blockResistance;
 	}
 
 }

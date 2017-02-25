@@ -104,4 +104,8 @@ public class ModBlockBarricadeDouble extends BlockContainer implements IBlock{
 	public boolean blocksDoors() {
 		return true;
 	}
+	@Override
+	public boolean blocksChest() {
+		return false;
+	}
 }

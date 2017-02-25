@@ -1,15 +1,13 @@
 package com.cubic_control.hnm.Items;
 
-import com.cubic_control.hnm.Lib.RefStrings;
-import com.cubic_control.hnm.Utils.ModUtils;
-
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+
+import com.cubic_control.cubic_core.Utils.ModUtils;
+import com.cubic_control.hnm.Lib.RefStrings;
 
 public class ModItemFlashlight extends ModItem implements IForwardLight{
 
@@ -35,7 +33,7 @@ public class ModItemFlashlight extends ModItem implements IForwardLight{
 		world.playSoundAtEntity(player, RefStrings.MODID + ":flashlight.off", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 		
 		MovingObjectPosition mop = Minecraft.getMinecraft().renderViewEntity.rayTrace(200, 1.0F);
-		ModUtils.updateLight(world, mop);
+		ModUtils.updateLightByMOP(world, mop);
 	}
 
 }
