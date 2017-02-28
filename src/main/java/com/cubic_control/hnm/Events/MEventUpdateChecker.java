@@ -13,12 +13,9 @@ import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class MEventUpdateChecker {
 	@SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
-	public void onEvent(PlayerTickEvent event)
-	{
-	  
+	public void onPlayerTickEvent(PlayerTickEvent event) {
 	    if (!MainRegistry.haveWarnedVersionOutOfDate && event.player.worldObj.isRemote 
-	          && !MainRegistry.versionChecker.isLatestVersion())
-	    {
+	          && !MainRegistry.versionChecker.isLatestVersion()) {
 	        ClickEvent versionCheckChatClickEvent = new ClickEvent(ClickEvent.Action.OPEN_URL, 
 	              "http://adf.ly/1jHmG4");
 	        ChatStyle clickableChatStyle = new ChatStyle().setChatClickEvent(versionCheckChatClickEvent);
