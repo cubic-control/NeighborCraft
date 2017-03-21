@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
+import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
 import com.cubic_control.hnm.Items.ModItemSlab;
 import com.cubic_control.hnm.Lib.RefStrings;
 
@@ -24,7 +25,7 @@ public class ModBlockFence extends BlockFence {
 		this.setStepSound(block.stepSound);
 		this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		this.setLightOpacity(0);
-		this.setCreativeTab(block.getCreativeTabToDisplayOn());
+		this.setCreativeTab(MCreativeTabs.tabAll);
 		this.setBlockName(name + "_fence");
 		GameRegistry.registerBlock(this, ModItemSlab.class, name + "_fence");
 	}

@@ -1,14 +1,18 @@
 package com.cubic_control.hnm.Events;
 
-import com.cubic_control.hnm.Items.IZoom;
-
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.FOVUpdateEvent;
+
+import com.cubic_control.hnm.Items.IZoom;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class MEventZoom {
 	
 	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
 	public void updateFOV(FOVUpdateEvent event) {
 		ItemStack stack = event.entity.getItemInUse();
 

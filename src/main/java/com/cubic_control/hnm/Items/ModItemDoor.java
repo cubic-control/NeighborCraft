@@ -7,6 +7,7 @@ import com.cubic_control.hnm.Lib.RefStrings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -15,6 +16,10 @@ public class ModItemDoor extends ModItem{
 
 	public ModItemDoor(String name, float f1) {
 		super(name, f1);
+	}
+	
+	public ModItemDoor(String name, String texture, float f1) {
+		super(name, texture, f1);
 	}
 	
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int i1, int i2, int i3, int i4, float f1, float f2, float f3)
@@ -27,8 +32,14 @@ public class ModItemDoor extends ModItem{
 
             if(this == MItems.door_golden) {
                 block = MBlocks.door_golden;
-            }else{
+            }else if(this == MItems.door_white){
                 block = MBlocks.door_white;
+            }else if(this == MItems.door_golden_iron){
+                block = MBlocks.door_golden_iron;
+            }else if(this == MItems.door_white_iron){
+                block = MBlocks.door_white_iron;
+            }else{
+            	block = Blocks.air;
             }
 
             if (player.canPlayerEdit(i1, i2, i3, i4, stack) && player.canPlayerEdit(i1, i2 + 1, i3, i4, stack))

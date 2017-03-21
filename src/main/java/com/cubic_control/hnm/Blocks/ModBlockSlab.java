@@ -1,5 +1,6 @@
 package com.cubic_control.hnm.Blocks;
 
+import com.cubic_control.hnm.CreativeTabs.MCreativeTabs;
 import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Items.ModItemSlab;
 import com.cubic_control.hnm.Lib.RefStrings;
@@ -28,7 +29,7 @@ public class ModBlockSlab extends BlockSlab{
 		if(isFull == false){
 			ModItemSlab.ModBlockSlab = this;
 			this.setLightOpacity(0);
-			this.setCreativeTab(block.getCreativeTabToDisplayOn());
+			this.setCreativeTab(MCreativeTabs.tabAll);
 			this.setBlockName(name + "_slab");
 			GameRegistry.registerBlock(this, ModItemSlab.class, name + "_slab");
 			GameRegistry.addRecipe(new ItemStack(this, 6), "XXX", 'X', block);

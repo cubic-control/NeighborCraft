@@ -25,7 +25,7 @@ public class ModItemKeycard extends ModItem{
 		Block block = world.getBlock(x, y, z);
 		TileEntity tile = world.getTileEntity(x, y, z);
 		
-		if(block == MBlocks.KAL_on){
+		if(block == MBlocks.KAL_on && !player.isSneaking()){
 			int i = world.getBlockMetadata(x, y, z);
 			world.setBlock(x, y, z, Blocks.air);
 			world.setTileEntity(x, y, z, null);
@@ -33,10 +33,25 @@ public class ModItemKeycard extends ModItem{
                 world.setBlock(x, y, z, MBlocks.KAL_off);
                 world.setBlockMetadataWithNotify(x, y, z, i, i);
             }
-			player.addChatMessage(new ChatComponentText(
-				EnumChatFormatting.GOLD+"["+EnumChatFormatting.WHITE+RefStrings.NAME+
-				EnumChatFormatting.GOLD+"]:"+EnumChatFormatting.GREEN+" KAL deactivated"));
-			
+			if(!world.isRemote){
+				player.addChatMessage(new ChatComponentText(
+						EnumChatFormatting.GOLD+"["+EnumChatFormatting.WHITE+RefStrings.NAME+
+						EnumChatFormatting.GOLD+"]:"+EnumChatFormatting.GREEN+" KAL deactivated"));
+			}
+			return true;
+		}else if(block == MBlocks.KAL_off && player.isSneaking()){
+			int i = world.getBlockMetadata(x, y, z);
+			world.setBlock(x, y, z, Blocks.air);
+			world.setTileEntity(x, y, z, null);
+			if(MBlocks.KAL_on.canPlaceBlockAt(world, x, y, z)) {
+                world.setBlock(x, y, z, MBlocks.KAL_on);
+                world.setBlockMetadataWithNotify(x, y, z, i, i);
+            }
+			if(!world.isRemote){
+				player.addChatMessage(new ChatComponentText(
+						EnumChatFormatting.GOLD+"["+EnumChatFormatting.WHITE+RefStrings.NAME+
+						EnumChatFormatting.GOLD+"]:"+EnumChatFormatting.GREEN+" KAL reactivated"));
+			}
 			return true;
 		}else{
 			return false;

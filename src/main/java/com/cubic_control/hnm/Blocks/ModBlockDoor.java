@@ -32,15 +32,18 @@ public class ModBlockDoor extends BlockDoor{
 		GameRegistry.registerBlock(this, var7 + "_block");
 	}
 	
-	//@Override
-	//public boolean onBlockActivated(World var1, int i1, int i2, int i3, EntityPlayer player, int i4, float f1, float f2, float f3) {
-        //super.onBlockActivated(var1, i1, i2, i3, player, i4, f1, f2, f3);
-        //if(boolean){
-        	//return true;
-        //}else{
-        	//return false;
-        //}
-    //}
+	protected ModBlockDoor(Material var1, float var2, float var3, String var4, int var5, SoundType var6, String var7, String var8) {
+		super(var1);
+		this.setCreativeTab(null);
+		this.setHardness(var2);
+		this.setResistance(var3);
+		this.setHarvestLevel(var4, var5);
+		this.setStepSound(var6);
+		this.setBlockName(var7);
+		this.setBlockTextureName(RefStrings.MODID + ":" + var8);
+		this.setTickRandomly(true);
+		GameRegistry.registerBlock(this, var7 + "_block");
+	}
 	
 	@Override
 	public Item getItemDropped(int i1, Random rand, int i2) {

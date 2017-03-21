@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.cubic_control.hnm.Blocks.MBlocks;
 import com.cubic_control.hnm.Configuration.MConfig;
+import com.cubic_control.hnm.Entity.AI.EntityAIStalking;
 import com.cubic_control.hnm.Entity.AI.ModEntityAIOpenDoor;
 import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Lib.RefStrings;
@@ -13,6 +14,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -43,6 +45,7 @@ public class EntityNeighbor extends EntityMob{
 		super(par1World);
 		this.getNavigator().setBreakDoors(true);
 		this.getNavigator().setEnterDoors(true);
+		this.tasks.addTask(0, new EntityAIStalking(this));
 		this.tasks.addTask(1, new EntityAISwimming(this));
 		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(3, new EntityAIMoveIndoors(this));

@@ -39,6 +39,8 @@ item.remover.name=Emergency Remover
 item.flashlight_lense.name=Flashlight Lense
 item.flashlight_handle.name=Flashlight Handle
 item.monoculars.name=Monoculars
+item.door_white_iron.name=White Door(IRON)
+item.door_golden_iron.name=Golden Door(IRON)
 
 //Blocks
     //Pre-Alpha
@@ -51,7 +53,8 @@ tile.grave.name=Grave
 tile.door_white.name=White Door
 tile.milk.name=Gallon Of Milk
 tile.lock_red.name=Red Lock
-tile.TechLock.name=K.A.L.
+tile.TechLock_on.name=K.A.L.
+tile.TechLock_off.name=K.A.L.
 tile.wood_turquoise_dif.name=Turquoise Wood
     //Alpha 3
 tile.door_golden.name=Golden Door
@@ -61,6 +64,8 @@ tile.lock_golden.name=Golden Lock
 tile.barricade_double.name=Double Barricade
 tile.barricade_single.name=Single Barricade
 tile.invisible_light.name=Invisible Light(For map makers)
+tile.door_white_iron.name=White Door(IRON)
+tile.door_golden_iron.name=Golden Door(IRON)
 
 //CreativeTabs
 itemGroup.tabAll=NeighborCraft

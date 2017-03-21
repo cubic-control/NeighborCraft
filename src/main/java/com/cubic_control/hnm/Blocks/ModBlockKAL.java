@@ -18,6 +18,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -112,5 +113,12 @@ public class ModBlockKAL extends BlockContainer implements IBlock{
 	@Override
 	public boolean blocksChest() {
 		return false;
+	}
+	public Item getItemDropped(int i1, Random rand, int i2) {
+        return Item.getItemFromBlock(MBlocks.KAL_on);
+    }
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z) {
+		return new ItemStack(MBlocks.KAL_on);
 	}
 }

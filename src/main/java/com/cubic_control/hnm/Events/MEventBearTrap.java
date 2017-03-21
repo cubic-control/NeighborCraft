@@ -27,7 +27,7 @@ public class MEventBearTrap {
 		
 		if(block == MBlocks.bear_trap){
 			event.player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 25, 10));
-			world.playSoundAtEntity(player, RefStrings.MODID + ":", 0.5F, 0.4F / (rand.nextFloat() * 0.4F + 0.8F));
+			//world.playSoundAtEntity(player, RefStrings.MODID + ":beartrap.close", 0.5F, 1.0F);
 		}
 	}
 }

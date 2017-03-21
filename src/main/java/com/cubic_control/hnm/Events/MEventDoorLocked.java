@@ -21,7 +21,7 @@ public class MEventDoorLocked {
 		World world = event.entityPlayer.worldObj;
 		Random rand = new Random();
 		
-		if(event.action == Action.RIGHT_CLICK_BLOCK){
+		if(event.action == Action.RIGHT_CLICK_BLOCK && !event.entityPlayer.isSneaking()){
 			Block block = event.entityPlayer.worldObj.getBlock(event.x, event.y, event.z);
 			
 			if(block instanceof BlockDoor){

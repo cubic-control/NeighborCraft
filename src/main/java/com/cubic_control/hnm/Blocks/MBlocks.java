@@ -26,6 +26,8 @@ public class MBlocks {
 	public static Block barricade_double;
 	public static Block barricade_single;
 	public static Block invisible_light;
+	public static Block door_white_iron;
+	public static Block door_golden_iron;
 	
 	public static Block blue_fabric_dif;
 	public static Block blue_wave_fabric_dif;
@@ -71,6 +73,8 @@ public class MBlocks {
 		barricade_double = new ModBlockBarricadeDouble("barricade_double");
 		barricade_single = new ModBlockBarricadeSingle("barricade_single");
 		invisible_light = new ModBlockInvisibleLight("invisible_light");
+		door_white_iron = new ModBlockDoor(Material.iron, 2f, 15f, "axe", 0, Block.soundTypeWood, "door_white_iron", "door_white");
+		door_golden_iron = new ModBlockDoor(Material.iron, 3f, 30f, "axe", 0, Block.soundTypeWood, "door_golden_iron", "door_golden");
 		
 		blue_fabric_dif = new ModBlock(Material.cloth, "blue_fabric_dif", 1f, "axe", -1, 10f, Block.soundTypeCloth);
 		blue_wave_fabric_dif = new ModBlock(Material.cloth, "blue_wave_fabric_dif", 1f, "axe", -1, 10f, Block.soundTypeCloth);

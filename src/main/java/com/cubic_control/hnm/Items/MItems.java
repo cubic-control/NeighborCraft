@@ -44,6 +44,8 @@ public class MItems {
 	public static Item flashlight_lense;
 	public static Item flashlight_handle;
 	public static Item monoculars;
+	public static Item door_white_iron;
+	public static Item door_golden_iron;
 	
 	public static void createItems(){
 		//Pre-Alpha
@@ -86,5 +88,7 @@ public class MItems {
 		flashlight_lense = new ModItem("flashlight_lense", 0.6f);
 		flashlight_handle = new ModItem("flashlight_handle", 1.1f);
 		monoculars = new ModItemMonoculars("monoculars", 0.3f);
+		door_white_iron = new ModItemDoor("door_white_iron", "door_white", 1.0f);
+		door_golden_iron = new ModItemDoor("door_golden_iron", "door_golden", 1.6f);
 	}
 }

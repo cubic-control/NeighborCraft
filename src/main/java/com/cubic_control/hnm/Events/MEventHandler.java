@@ -14,6 +14,7 @@ public class MEventHandler {
 		MinecraftForge.EVENT_BUS.register(new MEventDoorLocked());
 		FMLCommonHandler.instance().bus().register(new MEventUpdateChecker());
 		MinecraftForge.EVENT_BUS.register(new MEventChestLocked());
+		MinecraftForge.EVENT_BUS.register(new MEventNeighborKillsEntity());
 	}
 
 }

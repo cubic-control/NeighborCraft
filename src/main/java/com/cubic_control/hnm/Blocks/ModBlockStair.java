@@ -13,7 +13,7 @@ public class ModBlockStair extends BlockStairs{
 	protected ModBlockStair(Block block, String name) {
 		super(block, 0);
 		this.setLightOpacity(0);
-		this.setCreativeTab(block.getCreativeTabToDisplayOn());
+		this.setCreativeTab(MCreativeTabs.tabAll);
 		this.setHarvestLevel(block.getHarvestTool(0), block.getHarvestLevel(0));
 		this.setBlockName(name + "_stair");
 		this.setBlockTextureName(RefStrings.MODID + ":" + name);

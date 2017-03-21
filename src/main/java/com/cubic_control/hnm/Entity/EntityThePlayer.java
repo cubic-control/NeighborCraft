@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.cubic_control.hnm.Blocks.MBlocks;
 import com.cubic_control.hnm.Configuration.MConfig;
+import com.cubic_control.hnm.Entity.AI.EntityAIStalking;
 import com.cubic_control.hnm.Entity.AI.ModEntityAIOpenDoor;
 import com.cubic_control.hnm.Items.MItems;
 import com.cubic_control.hnm.Lib.RefStrings;
@@ -45,16 +46,17 @@ public class EntityThePlayer extends EntityFakeMob{
 		super(par1World);
 		this.getNavigator().setBreakDoors(true);
 		this.getNavigator().setEnterDoors(true);
-		this.tasks.addTask(0, new EntityAIAvoidEntity(this, EntityNeighbor.class, 5.0F, 1.0D, 1.5D));
-		this.tasks.addTask(1, new EntityAISwimming(this));
-		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
-		this.tasks.addTask(3, new EntityAIMoveIndoors(this));
-		this.tasks.addTask(4, new EntityAIRestrictOpenDoor(this));
-		this.tasks.addTask(5, new ModEntityAIOpenDoor(this, true));
-		this.tasks.addTask(6, new EntityAIMoveTowardsRestriction(this, 0.3F));
-		this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
-		this.tasks.addTask(7, new EntityAIAttackOnCollide(this, 1.0D, true));
-		this.tasks.addTask(7, new EntityAILookIdle(this));
+		this.tasks.addTask(0, new EntityAIStalking(this));
+		this.tasks.addTask(1, new EntityAIAvoidEntity(this, EntityNeighbor.class, 5.0F, 1.0D, 1.5D));
+		this.tasks.addTask(2, new EntityAISwimming(this));
+		this.tasks.addTask(3, new EntityAIWander(this, 1.0D));
+		this.tasks.addTask(4, new EntityAIMoveIndoors(this));
+		this.tasks.addTask(5, new EntityAIRestrictOpenDoor(this));
+		this.tasks.addTask(6, new ModEntityAIOpenDoor(this, true));
+		this.tasks.addTask(7, new EntityAIMoveTowardsRestriction(this, 0.3F));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
+		this.tasks.addTask(8, new EntityAIAttackOnCollide(this, 1.0D, true));
+		this.tasks.addTask(8, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, true, false, IMob.mobSelector));
 	}
